@@ -2,6 +2,8 @@ import React from 'react'
 import Header from './header'
 import Footer from './footer'
 import { useStaticQuery, graphql } from 'gatsby'
+import { StaticImage } from "gatsby-plugin-image"
+
 import "@fontsource/quicksand"
 
 function Layout({children}) {
@@ -18,10 +20,17 @@ function Layout({children}) {
   `)
     return(
         <>
-            <div className="h-screen">
-                <Header siteTitle={data.site.siteMetadata.title} />
-                <main>{children}</main>
-                <Footer metaData={data.site.siteMetadata.company} />
+            <div className="h-screen grid justify-items-center items-center">
+            
+                        <StaticImage 
+                            src="../images/logo.png" 
+                            alt="A dinosaur"
+                            placeholder="blurred"
+                            layout="fixed"
+                            width={817}
+                            
+                        />
+                <h1 className="content-center font-bold text-5xl align-top">Coming Soon...</h1>
             </div>
         </>
     )
