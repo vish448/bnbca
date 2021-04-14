@@ -1,0 +1,25 @@
+/* Header Component */
+nav a {
+    letter-spacing: 1px;
+    font-weight: 5;
+}
+
+
+/* Featured Collection */
+.cardContainerTwo{
+    background-image: url(../images/card-2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center; 
+    width: 373px;
+    height: 495px;
+ }
+
+
+/* New Launch */
+.item {
+    max-width: 365px;
+    width: 100%;
+    max-height: 445px;
+    height: 100%;
+}

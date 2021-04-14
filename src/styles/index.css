@@ -1,0 +1,7 @@
+.banner {
+    background-image:url("../images/hero-banner-2.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 35vw;
+}
