@@ -43,7 +43,7 @@ module.exports = {
         apiKey:process.env.SNIPCART,
         js: `https://cdn.snipcart.com/themes/v3.0.3/default/snipcart.js`,
         styles: `https://cdn.snipcart.com/themes/v3.0.3/default/snipcart.css`,
-        autopop: true
+        autopop: false
         }
     }
   ],

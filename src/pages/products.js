@@ -17,7 +17,7 @@ const ProductPage = ({ data }) =>  {
                 return(
 
                     <Link
-                            key={node.fields.slug}
+                            key={node.id}
                             to={node.fields.slug}
                             
                             >
