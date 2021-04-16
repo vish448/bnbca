@@ -24,19 +24,19 @@ function Footer({metaData}) {
                     <div>
                         <h1 className="text-2xl pb-2 font-bold">Useful Links</h1>
                         <ul>
-                            <li><Link>FAQ's</Link></li>
-                            <li><Link>Size Chart</Link></li>
-                            <li><Link>About Us</Link></li>
-                            <li><Link>Contact Us</Link></li>
+                            <li><Link to="/">FAQ's</Link></li>
+                            <li><Link to="/">Size Chart</Link></li>
+                            <li><Link to="/">About Us</Link></li>
+                            <li><Link to="/">Contact Us</Link></li>
                         </ul>
                     </div>
 
                     <div>
                         <h1 className="text-2xl pb-2 font-bold">Policies</h1>
                         <ul>
-                            <li><Link>Privacy Policy</Link></li>
-                            <li><Link>Shipping Policy</Link></li>
-                            <li><Link>Return/Exchange Policy</Link></li>
+                            <li><Link to="/">Privacy Policy</Link></li>
+                            <li><Link to="/">Shipping Policy</Link></li>
+                            <li><Link to="/">Return/Exchange Policy</Link></li>
                         </ul>
                     </div>
 
@@ -54,8 +54,8 @@ function Footer({metaData}) {
                     <div>
                         <h1 className="text-2xl pb-2 font-bold">Follow Us</h1>
                         <ul>
-                            <li><Link>Instagram</Link></li>
-                            <li><Link>Facebook</Link></li>
+                            <li><Link to="/">Instagram</Link></li>
+                            <li><Link to="/">Facebook</Link></li>
                             <p>We are one stop shop for all kids occassional dresses</p>
 
                         </ul>

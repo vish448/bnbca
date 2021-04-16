@@ -18,9 +18,16 @@ export default function ProductPage({ data }) {
 
     const [size, setSize] = useState('')
     const [color, setColor] = useState('')
+    const [activeSize, setActiveSize] = useState(null)
+    const [activeColor, setActiveColor] = useState(null)
 
-    console.log('size ',size)
-    console.log('color ',color )
+    const toggleSize = (index) => {
+        setActiveSize((activeSize) => (activeSize === index ? null : index))
+    }
+
+    const toggleColor = (index) => {
+        setActiveColor((activeColor) => (activeColor === index ? null : index))
+    }
 
     return (
         <>
@@ -37,20 +44,24 @@ export default function ProductPage({ data }) {
                     <p className="discount mb-4 "><span className="text-lg bg-green-600 text-white p-1">{discount}% OFF</span></p> 
                     <div className="sizes mb-4">
                         <p className="tracking-wider mb-2">Size</p>
-                        {productSizes.map(size => {
+                        {productSizes.map((size, index) => {
                                 return (
-                                    <span className="p-2 border-gray-200 border mr-2 hover:bg-black hover:text-white" onClick={() => setSize(size)}>{size}</span>
+                                    
+                                    <button className={`p-2 border-gray-200 border mr-2 hover:bg-black hover:text-white cursor-pointer focus:border-black ${activeSize === index ? 'bg-black text-white' : null}`} role="button" tabIndex={0} 
+                                    onClick={() => {toggleSize(index); setSize(size)}}
+                                    onKeyDown={() => {toggleSize(index); setSize(size)}} key={index}>{size}</button>
                                 )
                             }
                         )}
                     </div> 
                     <div className="colors mb-8">
                         <p className="tracking-wider mb-2">Color</p>
-                        {productColors.map(color => {
+                        {productColors.map((color,index) => {
                             return (
-                                <span className="p-2 border-gray-200 border mr-2 hover:bg-black hover:text-white" onClick={() => setColor(color)}>
+                                <button className={`p-2 border-gray-200 border mr-2 hover:bg-black hover:text-white cursor-pointer outline-none ${activeColor === index ? 'bg-black text-white' : null} `} role="button" tabIndex={0} 
+                                onClick={() => {toggleColor(index); setColor(color)}} onKeyDown = {()=> {toggleSize(index); setSize(size)}} key={index}>
                                  {color}
-                                </span>
+                                </button>
                             )
                             }
                         )}
@@ -69,14 +80,10 @@ export default function ProductPage({ data }) {
                             data-item-url={data.markdownRemark.fields.flug}
                             data-item-name={data.markdownRemark.frontmatter.name}
                             data-item-image={'http://localhost:8000/' + productImage}
-                            data-item-custom1-name='size'
-                            
-                            data-item-custom1-options="Black|Brown|Gold"
-                            
-                            data-item-custom2-name='color'
-                            data-item-custom2-options={color}
-                            data-item-custom2-required='true'
-                            
+                            data-item-custom1-name="size"
+                            data-item-custom1-value={size}
+                            data-item-custom2-name="color"
+                            data-item-custom2-value={color}
                     >
                             Add to cart
                     </button>
