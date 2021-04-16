@@ -77,7 +77,7 @@ export default function ProductPage({ data }) {
                     <button className="btn bg-green-500 mt-4 snipcart-add-item p-4 rounded text-white"
                             data-item-id={data.markdownRemark.frontmatter.id}
                             data-item-price={finalPrice}
-                            data-item-url={data.markdownRemark.fields.flug}
+                            data-item-url={data.markdownRemark.fields.slug}
                             data-item-name={data.markdownRemark.frontmatter.name}
                             data-item-image={'http://localhost:8000/' + productImage}
                             data-item-custom1-name="size"
