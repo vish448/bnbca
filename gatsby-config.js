@@ -27,7 +27,7 @@ module.exports = {
       resolve:`gatsby-source-filesystem`,
       options: {
         name:`content`,
-        path:`${__dirname}/src/content`
+        path:`${__dirname}/src/content/products`
       }
     },
     {
@@ -37,6 +37,7 @@ module.exports = {
         path:`${__dirname}/src/images`
       }
     },
+    `gatsby-transformer-csv`,
     {
       resolve:`gatsby-plugin-snipcart`,
       options: {

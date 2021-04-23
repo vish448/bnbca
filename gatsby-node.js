@@ -12,6 +12,15 @@ const onCreateNode = ({node,actions,getNode}) => {
             value
         })
     }
+    if(node.internal.type === `ProductsCsv`) {
+        const value = node.name
+        const processedSlug = value.replace(/\s+/g, '-').toLowerCase();
+        createNodeField({
+            name:`slug`,
+            node,
+            value: processedSlug
+        })
+    }
 }
 
 const createPages = async ({actions,graphql}) => {
@@ -21,13 +30,21 @@ const createPages = async ({actions,graphql}) => {
         allMarkdownRemark {
             edges {
                 node {
+                    frontmatter {
+                    productColors
+                    age
+                    }
+                }
+            }
+        }
+        allProductsCsv {
+            edges {
+                node {
                     id
-                    fields {
+                    fields{
                         slug
                     }
-                    frontmatter {
-                        templateKey
-                    }
+                    templateKey
                 }
             }
         }
@@ -36,11 +53,11 @@ const createPages = async ({actions,graphql}) => {
     if(result.errors){
         console.error(result.errors)
     }
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    result.data.allProductsCsv.edges.forEach(({ node }) => {
         createPage({
-            path: node.fields.slug,
+            path: `products/${node.fields.slug}`,
             component: path.resolve(
-                `src/templates/${String(node.frontmatter.templateKey)}.js`
+                `src/templates/${String(node.templateKey)}.js`
             ),
             context: {
                 id: node.id

@@ -3,14 +3,16 @@ import { graphql } from 'gatsby'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 export default function ProductPage({ data }) {
+    console.log('data', data.productsCsv)
     let discountedRate
     let finalPrice
-    let discount = data.markdownRemark.frontmatter.discount
-    const productImageFluid = getImage(data.markdownRemark.frontmatter.productImage)
-    const price = data.markdownRemark.frontmatter.price
-    const productSizes = data.markdownRemark.frontmatter.sizes
-    const productColors = data.markdownRemark.frontmatter.colors
-    const productImage = data.markdownRemark.frontmatter.productImage.childImageSharp.gatsbyImageData.images.fallback.src
+    let discount = data.productsCsv.discount
+    const productImageFluid = getImage(data.productsCsv.productImage)
+    const price = data.productsCsv.price
+    const productSizes = data.productsCsv.sizes.split(',')
+    console.log('productsizes',productSizes)
+    const productColors = data.productsCsv.colors.split(',')
+    const productImage = data.productsCsv.productImage.childImageSharp.gatsbyImageData.images.fallback.src
     if(discount){
         discountedRate = price - ((price * discount)/100)
         finalPrice = discountedRate.toFixed(2)
@@ -32,15 +34,15 @@ export default function ProductPage({ data }) {
     return (
         <>
             <div className="breadcrumb h-8 bg-gray-100 grid justify-items-center content-center">
-                {data.markdownRemark.fields.slug}
+                {data.productsCsv.slug}
             </div>
             <div className="grid grid-cols-2 gap-10 p-14">
                 <div>
                     <GatsbyImage image={productImageFluid} alt="pimage" />
                 </div>
                 <div>
-                    <h1 className="product-name text-4xl pb-4">{data.markdownRemark.frontmatter.name}</h1>
-                    <p className="price pb-2 text-lg">$ {finalPrice} <span className=" text-red-500 line-through">$ {data.markdownRemark.frontmatter.price}</span></p>
+                    <h1 className="product-name text-4xl pb-4">{data.productsCsv.name}</h1>
+                    <p className="price pb-2 text-lg">$ {finalPrice} <span className=" text-red-500 line-through">$ {data.productsCsv.price}</span></p>
                     <p className="discount mb-4 "><span className="text-lg bg-green-600 text-white p-1">{discount}% OFF</span></p> 
                     <div className="sizes mb-4">
                         <p className="tracking-wider mb-2">Size</p>
@@ -69,17 +71,14 @@ export default function ProductPage({ data }) {
                     <div className="product-details mb-4">
                         <p className="tracking-wider mb-2 font-extrabold"><b>Product Details</b></p>
                         <div
-                            dangerouslySetInnerHTML={{
-                                __html: data.markdownRemark.html
-                            }}
                         ></div>
                     </div>
                     <button className="btn bg-green-500 mt-4 snipcart-add-item p-4 rounded text-white"
-                            data-item-id={data.markdownRemark.frontmatter.id}
+                            data-item-id={data.productsCsv.id}
                             data-item-price={finalPrice}
-                            data-item-url={data.markdownRemark.fields.slug}
-                            data-item-name={data.markdownRemark.frontmatter.name}
-                            data-item-image={'http://localhost:8000/' + productImage}
+                            data-item-url={data.productsCsv.slug}
+                            data-item-name={data.productsCsv.name}
+                            data-item-image={'http://localhost:8000' + productImage}
                             data-item-custom1-name="size"
                             data-item-custom1-value={size}
                             data-item-custom2-name="color"
@@ -96,27 +95,27 @@ export default function ProductPage({ data }) {
 
 export const pageQuery = graphql`
     query($id: String){
-        markdownRemark(id:{eq:$id}) {
-            html
-            frontmatter {
-                name
-                price
-                productCategory
-                colors
-                discount
-                id
-                sizes
-                productImage {
-                    childImageSharp {
-                      gatsbyImageData(
-                          width: 600
-                        placeholder: BLURRED
-                      )
-                    }
-                  }
-              }
-            fields{
+        productsCsv(id: {eq: $id}) {
+            id
+            name
+            productCatergory
+            sizes
+            sku
+            stock
+            instock
+            description
+            colors
+            templateKey
+            price
+            discount
+            fields {
                 slug
+              }
+            productImage {
+              id
+              childImageSharp {
+                gatsbyImageData(width: 300, placeholder: BLURRED)
+              }
             }
         }
     }

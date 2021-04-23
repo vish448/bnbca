@@ -12,16 +12,7 @@ const productsLayout = ( {children} ) => {
                     alt="promo image"
                 />
             </div>
-            <div className="products-list grid grid-cols-7 gap-4 p-8">
-                <aside className="col-start-1">
-                    FILTER BY:
-                </aside>
-                <main className="col-start-2 col-end-6">
-                {children}
-                </main>
-            </div>
-            
-           
+            {children}
         </>
     )
 
