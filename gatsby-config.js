@@ -7,7 +7,7 @@ module.exports = {
   siteMetadata: {
     title:'BownBeeCa',
     description: `BownBeeCa - Indian Kids Ethinic wear`,
-    company: `BownBeeNorthAmerica`,
+    company: `BownBeeCanada`,
     companyWebsite:`bownbee.ca`
   },
   plugins: [

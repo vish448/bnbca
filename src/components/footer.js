@@ -1,14 +1,18 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { StaticImage } from "gatsby-plugin-image"
+import { MdLocalShipping } from "react-icons/md";
 function Footer({metaData}) {
     return(
         
             <footer>
                 <div className="footer-top h-40 grid grid-cols-3 justify-items-center items-center bg-yellow-300">
-                    <div>
+                    <div className="grid grid-cols-2">
+                        <MdLocalShipping className="float-left text-8xl"/>
+                        <div className="align-self-center">
                         <h1 className="text-2xl">Free Shipping</h1>
                         <p>on orders above $65</p>
+                        </div>
                     </div>
                     <div>
                         <h1 className="text-2xl">Curated Collection</h1>

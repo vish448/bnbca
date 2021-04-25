@@ -34,11 +34,11 @@ function Header({siteTitle}) {
                 </div>
                 <nav className="grid justify-items-center grid-cols-12 gap-4 h-12 items-center">
                     <Link to="/" className="col-start-4 active:bg-green-700">Home</Link>
-                    <Link to="/products">Girls</Link>
-                    <Link to="/products">Boys</Link>
-                    <Link to="/products">Infants</Link>
-                    <Link to="/products">Navratri</Link>
-                    <Link to="/products">Contact</Link> 
+                    <Link to="/girls">Girls</Link>
+                    <Link to="/boys">Boys</Link>
+                    <Link to="/products">Shop</Link>
+                    <Link to="/about-us">About Us</Link>
+                    <Link to="/contact-us">Contact</Link> 
                 </nav>
             </header>
             </>
