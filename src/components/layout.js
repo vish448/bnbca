@@ -3,6 +3,8 @@ import Header from './header'
 import Footer from './footer'
 import { useStaticQuery, graphql } from 'gatsby'
 import "@fontsource/quicksand"
+import "@fontsource/quicksand/700.css"
+import "@fontsource/quicksand/500.css"
 
 function Layout({children}) {
     const data = useStaticQuery(graphql`

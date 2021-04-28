@@ -184,12 +184,12 @@ export const PageQuery = graphql`
                     }
                 }
             }   
-            allProductsCsv(filter: {productCatergory: {eq: "girl"}}) {
+            allProductsCsv(filter: {productCategory: {eq: "girls"}}) {
                 edges {
                 node {
                     id
                     name
-                    productCatergory
+                    productCategory
                     sizes
                     sku
                     stock

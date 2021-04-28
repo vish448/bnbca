@@ -98,7 +98,7 @@ export const pageQuery = graphql`
         productsCsv(id: {eq: $id}) {
             id
             name
-            productCatergory
+            productCategory
             sizes
             sku
             stock

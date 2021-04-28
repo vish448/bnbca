@@ -60,7 +60,8 @@ const ProductPage = ({ data }) =>  {
         
                                 <Link
                                         key={node.id}
-                                        to={node.fields.slug}
+                                        //TODO -- Change the URL as per your Environment
+                                        to={`https://dev--bnbca.netlify.app/${node.productCategory}/${node.fields.slug}`}
                                         
                                         >
                                     <div className="product">
@@ -189,7 +190,7 @@ export const PageQuery = graphql`
               node {
                 id
                 name
-                productCatergory
+                productCategory
                 sizes
                 sku
                 stock

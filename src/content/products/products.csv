@@ -1,5 +1,5 @@
-id,sku,name,productCatergory,productImage,sizes,colors,stock,instock,description,templateKey,price,discount
-1,sku1,Printed jackaet kurta pajam,boy,productimages/item-1.png,1 to 2 years,yellow,1,TRUE,kurta and dhoti set. Silk material round neck. full sleeves.,products-page,45,20
-2,sku2,New printed jacket pijama,girl,productimages/item-2.png,"3 to 4 years, 8 to 9 years",red,1,TRUE,This is a test description,products-page,49.99,20
-3,sku3,White silk dhoti,boy,productimages/item-3.png,2 to 3 years,"white,red",1,TRUE,white silk dhoti for your kids. Sof and sil material,products-page,54.49,20
-4,sku4,pink kurti,girl,productimages/item-4.png,5 to 6 years,pink,1,FALSE,Pink karti for girls,products-page,65.99,20
+id,sku,name,productCategory,productImage,sizes,colors,stock,instock,description,templateKey,price,discount
+1,sku1,Printed jackaet kurta pajam,boys,productimages/item-1.png,1 to 2 years,yellow,1,TRUE,kurta and dhoti set. Silk material round neck. full sleeves.,products-page,45,20
+2,sku2,New printed jacket pijama,girls,productimages/item-2.png,"3 to 4 years, 8 to 9 years",red,1,TRUE,This is a test description,products-page,49.99,20
+3,sku3,White silk dhoti,boys,productimages/item-3.png,2 to 3 years,"white,red",1,TRUE,white silk dhoti for your kids. Sof and sil material,products-page,54.49,20
+4,sku4,pink kurti,girls,productimages/item-4.png,5 to 6 years,pink,1,FALSE,Pink karti for girls,products-page,65.99,20
