@@ -45,6 +45,7 @@ const createPages = async ({actions,graphql}) => {
                         slug
                     }
                     templateKey
+                    productCategory
                 }
             }
         }
@@ -54,8 +55,9 @@ const createPages = async ({actions,graphql}) => {
         console.error(result.errors)
     }
     result.data.allProductsCsv.edges.forEach(({ node }) => {
+        console.log(node.productCategory)
         createPage({
-            path: `products/${node.fields.slug}`,
+            path: `${String(node.productCategory)}/${node.fields.slug}`,
             component: path.resolve(
                 `src/templates/${String(node.templateKey)}.js`
             ),
