@@ -9,7 +9,7 @@ const ContactUsPage = () => {
         <>
         <div className="breadcrumb h-8 bg-gray-100 grid justify-items-center content-center">Contact Us
         </div>
-        <div className="container mx-auto p-10 grid grid-cols-4">
+        <div className="container mx-auto p-10 grid grid-cols-1 sm:grid-cols-4">
             <div className="col-start-1 col-span-2 justify-self-center self-center">
                 <AiTwotoneMail className="float-left m-1"/>: <a href="mailto:bownbeecanada@gmail.com">bownbeecanada@gmail.com </a><br/>
                 <FaFacebookF className="float-left m-1"/>: <a href="https://www.facebook.com/profile.php?id=100057448820311">bownbeecanada</a> <br/>
