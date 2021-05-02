@@ -9,9 +9,6 @@ const ProductPage = ({ data }) =>  {
     const csvItems = data.allProductsCsv.edges
     const [colorFilter,setColorFilter] = useState(null)
     const [ageFilter, setAgeFilter] = useState(null)
-    console.log('csvItems',csvItems)
-    console.log('products',productsFilter)
-    console.log('ageFilter',ageFilter)
 
     const resetFilters = () => {
         setColorFilter(null);
@@ -21,9 +18,10 @@ const ProductPage = ({ data }) =>  {
     if (colorFilter == null && ageFilter == null) {
         return ( 
             <ProductsList>
-            <div className="products-list grid grid-cols-5 gap-4 p-8">
-            <aside className="col-start-1">
-                FILTER BY:
+            <div className="products-list grid grid-cols-1 sm:grid-cols-5 gap-0 sm:gap-4 p-2 sm:p-8">
+            FILTER BY:
+                <aside className="grid grid-cols-2 sm:grid-cols-1 col-start-1">
+                <div className="grid colorFilter w-40">
                     <h1 className="underline mb-2 text-lg mt-5">COLOR</h1>
                     {productsFilter.map(({node})=> {
                         const productColors = node.frontmatter.productColors
@@ -37,6 +35,8 @@ const ProductPage = ({ data }) =>  {
                             </>
                         )
                     })}
+                    </div>
+                    <div className="ageFilter">
                     <h1 className="mt-5 underline text-lg mb-2">AGE</h1>
                     {productsFilter.map(({node})=> {
                         const age = node.frontmatter.age
@@ -50,11 +50,12 @@ const ProductPage = ({ data }) =>  {
                             </>
                         )
                     })}
+                    </div>
             </aside>
-            <main className="col-start-2 col-end-6">
-                <h1 className="text-4xl font-bold mb-8">Products</h1>
-                <div className="product-list grid grid-cols-4 gap-4 mb-8">
-                    {csvItems.map( ({node} ) => {
+            <main className="col-start-1 sm:col-start-2 col-end-6">
+            <h1 className="text-4xl font-bold mb-8">Products</h1>
+            <div className="product-list grid grid-cols-1 justify-items-center sm:justify-items-start sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+            {csvItems.map( ({node} ) => {
                         const productImageFluidCsv = getImage(node.productImage)
                             return(
         
@@ -82,9 +83,10 @@ const ProductPage = ({ data }) =>  {
 
         return ( 
             <ProductsList>
-            <div className="products-list grid grid-cols-5 gap-4 p-8">
-            <aside className="col-start-1">
+            <div className="products-list grid grid-cols-1 sm:grid-cols-5 gap-0 sm:gap-4 p-2 justify-items-center sm:justify-items-start sm:p-8">
                 FILTER BY:
+                <aside className="grid grid-cols-2 sm:grid-cols-1 col-start-1">
+                <div className="grid colorFilter w-40">
                     <h1 className="underline mb-2 text-lg mt-5">COLOR</h1>
                     {productsFilter.map(({node})=> {
                         const productColors = node.frontmatter.productColors
@@ -98,6 +100,8 @@ const ProductPage = ({ data }) =>  {
                             </>
                         )
                     })}
+                    </div>
+                    <div className="ageFilter">
                     <h1 className="mt-5 underline text-lg mb-2">AGE</h1>
                     {productsFilter.map(({node})=> {
                         const age = node.frontmatter.age
@@ -111,9 +115,10 @@ const ProductPage = ({ data }) =>  {
                             </>
                         )
                     })}
+                    </div>
             </aside>
            
-            <main className="col-start-2 col-end-6">
+            <main className="col-start-1 sm:col-start-2 col-end-6">
                 <h1 className="text-4xl font-bold mb-8">Products
                     <span className="ml-10 text-sm">Filter: 
                         
@@ -121,7 +126,7 @@ const ProductPage = ({ data }) =>  {
                         <span className="bg-gray-100 p-1 pl-3 pr-3 rounded-xl" onClick={()=> (setAgeFilter(null))}>{ageFilter}</span> <span className="bg-gray-100 p-1 pl-3 pr-3 rounded-xl cursor-pointer" onClick= {() => resetFilters()}>RESET</span>
                     </span>
                 </h1>
-                <div className="product-list grid grid-cols-4 gap-4 mb-8">
+                <div className="product-list grid grid-cols-1 justify-items-center sm:grid-cols-4 gap-4 mb-8">
                     {csvItems.map( ({node} ) => {
                         const productImageFluidCsv = getImage(node.productImage)
                         
@@ -145,10 +150,9 @@ const ProductPage = ({ data }) =>  {
                             return(
         
                                 <Link
-                                        key={node.id}
-                                        to={node.fields.slug}
-                                        
-                                        >
+                                    key={node.id}
+                                    to={node.fields.slug}
+                                    >
                                     <div className="product">
                                         <GatsbyImage image={productImageFluidCsv} alt="pimage" />
                                         <h1>{node.name}</h1>

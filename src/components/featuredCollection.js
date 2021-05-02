@@ -12,7 +12,7 @@ function FeaturedCollection() {
                 <div className="cardContainerTwo">
                     <div className="cardContent grid grid-cols-2">
                         <div className="contentLeft px-8">
-                            <h1 className="font-semibold text-4xl py-20 leading-8">Spring Summer 2020</h1>
+                            <h1 className="font-semibold text-4xl py-20 lg:py-16 leading-8">Spring Summer 2020</h1>
                             <p>Cottons and Florals for the season</p>
                             <p className="pt-10 text-lg font-bold"><Link>Export Collection</Link></p>
                         </div>
@@ -29,7 +29,7 @@ function FeaturedCollection() {
                 <div className="cardContainerTwo">
                     <div className="cardContent grid grid-cols-2">
                         <div className="contentLeft px-8">
-                            <h1 className="font-semibold text-4xl py-20 leading-8">Spring Summer 2020</h1>
+                            <h1 className="font-semibold text-4xl py-20 lg:py-16  leading-8">Spring Summer 2020</h1>
                             <p>Cottons and Florals for the season</p>
                             <p className="pt-10 text-lg font-bold"><Link>Export Collection</Link></p>
                         </div>
@@ -46,7 +46,7 @@ function FeaturedCollection() {
                 <div className="cardContainerTwo">
                     <div className="cardContent grid grid-cols-2">
                         <div className="contentLeft px-8">
-                            <h1 className="font-semibold text-4xl py-20 leading-8">Spring Summer 2020</h1>
+                            <h1 className="font-semibold text-4xl py-20 lg:py-16  leading-8">Spring Summer 2020</h1>
                             <p>Cottons and Florals for the season</p>
                             <p className="pt-10 text-lg font-bold"><Link>Export Collection</Link></p>
                         </div>

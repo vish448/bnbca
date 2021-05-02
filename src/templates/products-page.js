@@ -36,7 +36,7 @@ export default function ProductPage({ data }) {
             <div className="breadcrumb h-8 bg-gray-100 grid justify-items-center content-center">
                 {data.productsCsv.slug}
             </div>
-            <div className="grid grid-cols-2 gap-10 p-14">
+            <div className="grid grid-cols-1 justify-items-center sm:justify-items-start sm:grid-cols-2 gap-10 p-14">
                 <div>
                     <GatsbyImage image={productImageFluid} alt="pimage" />
                 </div>

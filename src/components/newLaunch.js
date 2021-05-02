@@ -5,7 +5,7 @@ function NewLaunch() {
     return (
         <>
             <h1 className="mx-auto h-20 pt-8 text-3xl font-semibold grid justify-center content-center leading-1">New Launch</h1>
-            <div className="grid gap-4 grid-cols-5 mx-auto justify-items-center p-8 md:grid-flow-col grid-flow-row">
+            <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-5 mx-auto justify-items-center p-8 md:grid-flow-col grid-flow-row">
                 <div className="item grid justify-items-center items-center">
                     <StaticImage 
                     src="../images/item-2.png" 
