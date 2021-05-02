@@ -24,7 +24,6 @@ const ContactUsPage = () => {
                 placeholder="blurred"
             />
             </div>
-            TEst
         </div>
         </>
     )
