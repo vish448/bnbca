@@ -3,14 +3,12 @@ import { graphql } from 'gatsby'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 export default function ProductPage({ data }) {
-    console.log('data', data.productsCsv)
     let discountedRate
     let finalPrice
     let discount = data.productsCsv.discount
     const productImageFluid = getImage(data.productsCsv.productImage)
     const price = data.productsCsv.price
     const productSizes = data.productsCsv.sizes.split(',')
-    console.log('productsizes',productSizes)
     const productColors = data.productsCsv.colors.split(',')
     const productImage = data.productsCsv.productImage.childImageSharp.gatsbyImageData.images.fallback.src
     if(discount){
@@ -78,7 +76,7 @@ export default function ProductPage({ data }) {
                             data-item-price={finalPrice}
                             data-item-url={data.productsCsv.slug}
                             data-item-name={data.productsCsv.name}
-                            data-item-image={'http://localhost:8000' + productImage}
+                            data-item-image={'https://dev--bnbca.netlify.app/' + productImage}
                             data-item-custom1-name="size"
                             data-item-custom1-value={size}
                             data-item-custom2-name="color"
