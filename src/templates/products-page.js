@@ -76,7 +76,7 @@ export default function ProductPage({ data }) {
                             data-item-price={finalPrice}
                             data-item-url={data.productsCsv.slug}
                             data-item-name={data.productsCsv.name}
-                            data-item-image={'http://localhost:8000' + productImage}
+                            data-item-image={'https://dev--bnbca.netlify.app/' + productImage}
                             data-item-custom1-name="size"
                             data-item-custom1-value={size}
                             data-item-custom2-name="color"
