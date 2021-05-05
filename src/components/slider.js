@@ -1,12 +1,23 @@
 import React from "react";
 import Slider from "react-slick";
-import {graphql, Link} from 'gatsby'
+import {graphql, Link, useStaticQuery} from 'gatsby'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
 
-const SimpleSlider = ( {data} ) => {
+const SimpleSlider = () => {
+    const data = useStaticQuery(graphql`
+      query heroImage {
+        allImageSharp(filter: {original: {height: {gt: 414, lt: 417}}}) {
+          edges {
+            node {
+              gatsbyImageData
+            }
+          }
+        }
+      }
+    `)
     const settings = {
       dots: false,
       infinite: true,
@@ -17,7 +28,6 @@ const SimpleSlider = ( {data} ) => {
       arrows: true,
       className: 'slides'
     };
-    console.log(data)
     const heroImages = data.allImageSharp.edges
     return (
       <div className="relative">
@@ -41,15 +51,3 @@ const SimpleSlider = ( {data} ) => {
   }
 
   export default SimpleSlider
-
-  export const query = graphql`
-  query heroImage {
-    allImageSharp(filter: {original: {height: {gt: 414, lt: 417}}}) {
-      edges {
-        node {
-          gatsbyImageData
-        }
-      }
-    }
-  }
-`

@@ -1,67 +1,80 @@
 import React from 'react'
-import { StaticImage } from "gatsby-plugin-image"
+import {graphql, useStaticQuery, Link} from 'gatsby'
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-function NewLaunch() {
+
+const NewLaunch = () => {
+    
+    const data = useStaticQuery(graphql`
+    query newLaunchQuery {
+        allProductsCsv(filter: {newLaunch: {eq: "true"}}) {
+        edges {
+            node {
+            id
+            name
+            productCategory
+            sizes
+            sku
+            stock
+            instock
+            description
+            colors
+            templateKey
+            price
+            discount
+            fields {
+                slug
+            }
+            productImage {
+                  id
+                  childImageSharp {
+                    gatsbyImageData(width: 300, placeholder: BLURRED)
+                  }
+                }
+            newLaunch
+            }
+        }
+        }
+    }
+  `)
+
+const newLaunchProducts = data.allProductsCsv.edges
+
+console.log("newlaunch", data)
     return (
         <>
             <h1 className="mx-auto h-20 pt-8 text-3xl font-semibold grid justify-center content-center leading-1">New Launch</h1>
             <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-5 mx-auto justify-items-center p-8 md:grid-flow-col grid-flow-row">
-                <div className="item grid justify-items-center items-center">
-                    <StaticImage 
-                    src="../images/item-2.png" 
-                    alt="A dinosaur"
-                    placeholder="blurred"
-                    />
-                    <div className="item-details">
-                        <p className="desc text-gray-400 capitalize font-normal">Printed Jackaet kurta pajama set-gray</p>
-                        <p className="price text-black text-xl">$45.90</p>
-                    </div>
-                    
-                </div>
-                <div className="item grid justify-items-center items-center">
-                    <StaticImage 
-                    src="../images/item-3.png" 
-                    alt="A dinosaur"
-                    placeholder="blurred"
-                    />
-                    <div className="item-details">
-                        <p className="desc text-gray-400 capitalize font-normal">Printed Jackaet kurta pajama set-gray</p>
-                        <p className="price text-black text-xl">$45.90</p>
-                    </div>
-                </div>
-                <div className="item grid justify-items-center items-center">
-                    <StaticImage 
-                    src="../images/item-4.png" 
-                    alt="A dinosaur"
-                    placeholder="blurred"
-                    />
-                    <div className="item-details">
-                        <p className="desc text-gray-400 capitalize font-normal">Printed Jackaet kurta pajama set-gray</p>
-                        <p className="price text-black text-xl">$45.90</p>
-                    </div>
-                </div>
-                <div className="item grid justify-items-center items-center">
-                    <StaticImage 
-                    src="../images/item-5.png" 
-                    alt="A dinosaur"
-                    placeholder="blurred"
-                    />
-                    <div className="item-details">
-                        <p className="desc text-gray-400 capitalize font-normal">Printed Jackaet kurta pajama set-gray</p>
-                        <p className="price text-black text-xl">$45.90</p>
-                    </div>
-                </div>
-                <div className="item grid justify-items-center items-center">
-                    <StaticImage 
-                    src="../images/item-6.png" 
-                    alt="A dinosaur"
-                    placeholder="blurred"
-                    />
-                    <div className="item-details">
-                        <p className="desc text-gray-400 capitalize font-normal">Printed Jackaet kurta pajama set-gray</p>
-                        <p className="price text-black text-xl">$45.90 <span className="discount text-red-500 text-sm line-through">$59.90</span></p>
-                    </div>
-                </div>
+                
+                {
+                    newLaunchProducts.map(({node})=>{
+                        const newLaunchproductImage = getImage(node.productImage)
+                        let discountedRate
+                        let finalPrice
+                        const price = node.price
+                        console.log('price',price)
+                        let discount = node.discount
+                        if(discount){
+                            discountedRate = price - ((price * discount)/100)
+                            finalPrice = discountedRate.toFixed(2)
+                        }
+                        return(
+                            <Link 
+                                key={node.id}
+                                to={`https://dev--bnbca.netlify.app/${node.productCategory}/${node.fields.slug}`}
+                                className="hover:text-black"
+                                >
+                            <div className="item grid items-center">
+                            <GatsbyImage image={newLaunchproductImage} alt="pimage" />
+                            <div className="item-details p-1 mt-1">
+                                <p className="desc text-gray-400 capitalize font-normal">{node.name}</p>
+                                <p className="price pb-2 text-lg">$ {finalPrice} <span className=" text-red-500 line-through">$ {node.price}</span></p>
+                            </div>
+                            </div>
+                            </Link>
+                        )
+                    })
+                }
                 
             </div>
 

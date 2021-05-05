@@ -11,7 +11,7 @@ import Banner from '../components/slider'
 const Home = ({data}) => {
   return ( 
     <>
-      <Banner data={data} />
+      <Banner {...data} />
       <FeaturedCollection />
       <NewLaunch />
     </>
