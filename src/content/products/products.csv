@@ -3,3 +3,11 @@ id,sku,name,productCategory,productImage,sizes,colors,stock,instock,description,
 2,sku2,New printed jacket pijama,girls,productimages/item-2.png,"3 to 4 years, 8 to 9 years",red,1,TRUE,This is a test description,products-page,49.99,20,true
 3,sku3,White silk dhoti,boys,productimages/item-3.png,2 to 3 years,"white,red",1,TRUE,white silk dhoti for your kids. Sof and sil material,products-page,54.49,20,false
 4,sku4,pink kurti,girls,productimages/item-4.png,5 to 6 years,pink,1,FALSE,Pink karti for girls,products-page,65.99,20,true
+5,sku2,New printed jacket pijama,girls,productimages/item-2.png,"3 to 4 years, 8 to 9 years",red,1,TRUE,This is a test description,products-page,49.99,20,true
+6,sku3,White silk dhoti,boys,productimages/item-3.png,2 to 3 years,"white,red",1,TRUE,white silk dhoti for your kids. Sof and sil material,products-page,54.49,20,true
+7,sku4,pink kurti,girls,productimages/item-4.png,5 to 6 years,pink,1,FALSE,Pink karti for girls,products-page,65.99,20,true
+8,sku3,White silk dhoti,boys,productimages/item-3.png,2 to 3 years,"white,red",1,TRUE,white silk dhoti for your kids. Sof and sil material,products-page,54.49,20,true
+9,sku4,pink kurti,girls,productimages/item-4.png,5 to 6 years,pink,1,FALSE,Pink karti for girls,products-page,65.99,20,true
+10,sku2,New printed jacket pijama,girls,productimages/item-2.png,"3 to 4 years, 8 to 9 years",red,1,TRUE,This is a test description,products-page,49.99,20,true
+11,sku3,White silk dhoti,boys,productimages/item-3.png,2 to 3 years,"white,red",1,TRUE,white silk dhoti for your kids. Sof and sil material,products-page,54.49,20,true
+12,sku4,pink kurti,girls,productimages/item-4.png,5 to 6 years,pink,1,FALSE,Pink karti for girls,products-page,65.99,20,true

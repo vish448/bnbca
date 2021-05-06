@@ -9,7 +9,7 @@ import { FaFacebookF, FaShippingFast } from "react-icons/fa";
 function Footer({metaData}) {
     return(
         
-            <footer>
+            <footer className="mt-10">
                 <div className="footer-top h-40 md:grid grid-cols-3 hidden justify-items-center items-center bg-yellow-300">
                     <div className="grid grid-cols-2">
                         <MdLocalShipping className="text-8xl justify-self-center"/>
