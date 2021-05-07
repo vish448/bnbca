@@ -43,8 +43,6 @@ const NewLaunch = () => {
 
 const newLaunchProducts = data.allProductsCsv.edges
 
-console.log("newlaunch", data)
-
 var settings = {
     dots: false,
     infinite: true,

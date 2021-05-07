@@ -20,8 +20,8 @@ const GirlsPage = ({ data }) =>  {
             <ProductsList>
             <div className="products-list grid grid-cols-1 sm:grid-cols-5 gap-0 sm:gap-4 p-2 sm:p-8">
             FILTER BY:
-                <aside className="grid grid-cols-2 sm:grid-cols-1 col-start-1">
-                    <div className="colorFilter w-40">
+                <aside className="grid-cols-2 sm:grid-cols-1 col-start-1">
+                    <div className="grid colorFilter w-40">
                     <h1 className="underline mb-2 text-lg mt-5">COLOR</h1>
                     {productsFilter.map(({node})=> {
                         const productColors = node.frontmatter.productColors
@@ -84,8 +84,8 @@ const GirlsPage = ({ data }) =>  {
             <ProductsList>
             <div className="products-list grid grid-cols-1 sm:grid-cols-5 gap-0 sm:gap-4 p-2 justify-items-center sm:justify-items-start sm:p-8">
                 FILTER BY:
-                <aside className="grid grid-cols-2 sm:grid-cols-1 col-start-1">
-                <div className="colorFilter w-40">
+                <aside className="grid-cols-2 sm:grid-cols-1 col-start-1">
+                <div className="grid colorFilter w-40">
 
                     <h1 className="underline mb-2 text-lg mt-5">COLOR</h1>
                     {productsFilter.map(({node})=> {
