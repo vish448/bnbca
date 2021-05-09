@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import { graphql } from 'gatsby'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 
 export default function ProductPage({ data }) {
     let discountedRate
@@ -29,14 +32,37 @@ export default function ProductPage({ data }) {
         setActiveColor((activeColor) => (activeColor === index ? null : index))
     }
 
+    const settings = {
+        customPaging: function(i) {
+          return (
+            <a>
+              <img src={`http://localhost:8000/static/65375aa35186f8a457bd5654189fb8f1/a4339/item-1.png`} />
+            </a>
+          );
+        },
+        dots: true,
+        dotsClass: "slick-dots slick-thumb",
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      };
     return (
         <>
             <div className="breadcrumb h-8 bg-gray-100 grid justify-items-center content-center">
                 {data.productsCsv.slug}
             </div>
-            <div className="grid grid-cols-1 justify-items-center sm:justify-items-start sm:grid-cols-2 gap-10 p-14">
-                <div>
-                    <GatsbyImage image={productImageFluid} alt="pimage" />
+            <div className="grid grid-cols-1 justify-items-center sm:justify-items-start sm:grid-cols-2 gap-10 p-14 container mx-auto border-2">
+                <div className="grid grid-cols-1">
+                    <Slider {...settings}>
+                        <div>
+                            <GatsbyImage image={productImageFluid} alt="pimage"/>
+                        </div>
+                        <div>
+                            <GatsbyImage image={productImageFluid} alt="pimage"/>
+                        </div>
+                    </Slider>
+                    
                 </div>
                 <div>
                     <h1 className="product-name text-4xl pb-4">{data.productsCsv.name}</h1>
@@ -112,7 +138,7 @@ export const pageQuery = graphql`
             productImage {
               id
               childImageSharp {
-                gatsbyImageData(width: 300, placeholder: BLURRED)
+                gatsbyImageData(width: 600, placeholder: BLURRED)
               }
             }
         }

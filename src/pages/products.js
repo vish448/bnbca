@@ -62,7 +62,7 @@ const ProductPage = ({ data }) =>  {
                                 <Link
                                         key={node.id}
                                         //TODO -- Change the URL as per your Environment
-                                        to={`https://dev--bnbca.netlify.app/${node.productCategory}/${node.fields.slug}`}
+                                        to={`${process.env.WEBURL}/${node.productCategory}/${node.fields.slug}`}
                                         
                                         >
                                     <div className="product">
@@ -189,7 +189,7 @@ export const ProductPageQuery = graphql`
                     }
                 }
             }   
-        allProductsCsv {
+        allProductsCsv(filter: {type: {eq: "variable"}}) {
             edges {
               node {
                 id

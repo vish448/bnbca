@@ -189,7 +189,7 @@ export const PageQuery = graphql`
                     }
                 }
             }   
-            allProductsCsv(filter: {productCategory: {eq: "boys"}}) {
+            allProductsCsv(filter: {productCategory: {eq: "boys"},type: {eq: "variable"}}) {
                 edges {
                 node {
                     id

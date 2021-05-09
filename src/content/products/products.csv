@@ -1,13 +1,20 @@
-id,sku,name,productCategory,productImage,sizes,colors,stock,instock,description,templateKey,price,discount,newLaunch
-1,sku1,Printed jackaet kurta pajam,boys,productimages/item-1.png,1 to 2 years,yellow,1,TRUE,kurta and dhoti set. Silk material round neck. full sleeves.,products-page,45,20,true
-2,sku2,New printed jacket pijama,girls,productimages/item-2.png,"3 to 4 years, 8 to 9 years",red,1,TRUE,This is a test description,products-page,49.99,20,true
-3,sku3,White silk dhoti,boys,productimages/item-3.png,2 to 3 years,"white,red",1,TRUE,white silk dhoti for your kids. Sof and sil material,products-page,54.49,20,false
-4,sku4,pink kurti,girls,productimages/item-4.png,5 to 6 years,pink,1,FALSE,Pink karti for girls,products-page,65.99,20,true
-5,sku2,New printed jacket pijama,girls,productimages/item-2.png,"3 to 4 years, 8 to 9 years",red,1,TRUE,This is a test description,products-page,49.99,20,true
-6,sku3,White silk dhoti,boys,productimages/item-3.png,2 to 3 years,"white,red",1,TRUE,white silk dhoti for your kids. Sof and sil material,products-page,54.49,20,true
-7,sku4,pink kurti,girls,productimages/item-4.png,5 to 6 years,pink,1,FALSE,Pink karti for girls,products-page,65.99,20,true
-8,sku3,White silk dhoti,boys,productimages/item-3.png,2 to 3 years,"white,red",1,TRUE,white silk dhoti for your kids. Sof and sil material,products-page,54.49,20,true
-9,sku4,pink kurti,girls,productimages/item-4.png,5 to 6 years,pink,1,FALSE,Pink karti for girls,products-page,65.99,20,true
-10,sku2,New printed jacket pijama,girls,productimages/item-2.png,"3 to 4 years, 8 to 9 years",red,1,TRUE,This is a test description,products-page,49.99,20,true
-11,sku3,White silk dhoti,boys,productimages/item-3.png,2 to 3 years,"white,red",1,TRUE,white silk dhoti for your kids. Sof and sil material,products-page,54.49,20,true
-12,sku4,pink kurti,girls,productimages/item-4.png,5 to 6 years,pink,1,FALSE,Pink karti for girls,products-page,65.99,20,true
+id,type,sku,name,productCategory,productImage,sizes,colors,stock,instock,description,price,discount,newLaunch,templateKey
+1,variable,DW20DK18,Printed jackaet kurta pajam,boys,productimages/DW20DK18NB.JPG,3-6 Months,"navy blue, red",1,TRUE,kurta and dhoti set. Silk material round neck. full sleeves.,50,20,TRUE,products-page
+2,variable,DW20DK18NB12,Printed jackaet kurta pajam,boys,productimages/DW20DK18NB.JPG,3-6 Months,"navy blue, red",1,TRUE,kurta and dhoti set. Silk material round neck. full sleeves.,50,20,TRUE,products-page
+3,variation,DW20DK18NB14,Printed jackaet kurta pajam,boys,productimages/DW20DK18NB.JPG,14-(6-12 Months),navy blue,1,TRUE,kurta and dhoti set. Silk material round neck. full sleeves.,50,20,FALSE,products-page
+4,variation,DW20DK18NB16,Printed jackaet kurta pajam,boys,productimages/DW20DK18NB.JPG,16-(1-2 Years),navy blue,1,TRUE,kurta and dhoti set. Silk material round neck. full sleeves.,50,20,FALSE,products-page
+5,variation,DW20DK18NB18,Printed jackaet kurta pajam,boys,productimages/DW20DK18NB.JPG,18-(2-3 Years),navy blue,1,TRUE,kurta and dhoti set. Silk material round neck. full sleeves.,50,20,FALSE,products-page
+6,variation,DW20DK18NB20,Printed jackaet kurta pajam,boys,productimages/DW20DK18NB.JPG,20-(3-4 Years),navy blue,1,TRUE,kurta and dhoti set. Silk material round neck. full sleeves.,50,20,FALSE,products-page
+7,variation,DW20DK18NB22,Printed jackaet kurta pajam,boys,productimages/DW20DK18NB.JPG,22-(4-5 Years),navy blue,1,TRUE,kurta and dhoti set. Silk material round neck. full sleeves.,50,20,FALSE,products-page
+8,variation,DW20DK18NB24,Printed jackaet kurta pajam,boys,productimages/DW20DK18NB.JPG,24-(5-6 Years),navy blue,1,TRUE,kurta and dhoti set. Silk material round neck. full sleeves.,50,20,FALSE,products-page
+9,variation,DW20DK18RD12,Printed jackaet kurta pajam,boys,productimages/DW20DK18RD.JPG,3-6 Months,red,1,TRUE,Red Kurta and Blue printed silk Dhoti. Full Sleeves,50,20,TRUE,products-page
+10,variation,DW20DK18RD14,Printed jackaet kurta pajam,boys,productimages/DW20DK18RD.JPG,14-(6-12 Months),red,1,TRUE,Red Kurta and Blue printed silk Dhoti. Full Sleeves,50,20,FALSE,products-page
+11,variation,DW20DK18RD16,Printed jackaet kurta pajam,boys,productimages/DW20DK18RD.JPG,16-(1-2 Years),red,1,TRUE,Red Kurta and Blue printed silk Dhoti. Full Sleeves,50,20,FALSE,products-page
+12,variation,DW20DK18RD18,Printed jackaet kurta pajam,boys,productimages/DW20DK18RD.JPG,18-(2-3 Years),red,1,TRUE,Red Kurta and Blue printed silk Dhoti. Full Sleeves,50,20,FALSE,products-page
+13,variation,DW20DK18RD20,Printed jackaet kurta pajam,boys,productimages/DW20DK18RD.JPG,20-(3-4 Years),red,1,TRUE,Red Kurta and Blue printed silk Dhoti. Full Sleeves,50,20,FALSE,products-page
+14,variation,DW20DK18RD22,Printed jackaet kurta pajam,boys,productimages/DW20DK18RD.JPG,22-(4-5 Years),red,1,TRUE,Red Kurta and Blue printed silk Dhoti. Full Sleeves,50,20,FALSE,products-page
+15,variation,DW20DK18RD24,Printed jackaet kurta pajam,boys,productimages/DW20DK18RD.JPG,24-(5-6 Years),red,1,TRUE,Red Kurta and Blue printed silk Dhoti. Full Sleeves,50,20,FALSE,products-page
+16,variable,GIW035GR66,Printed Top and Bottom,girls,productimages/GIW035GR.JPG,6-12 Months,green,1,TRUE,Green printed top and Yellow Bottom ,55,20,TRUE,products-page
+17,variable,NV20KD13RD14,Red navrati kediya,boys,productimages/NV20KD13RD.JPG,2 to 3 years,red,1,TRUE,Red Kediyu with Topi ,65,20,TRUE,products-page
+18,variable,PG20PV01WH01,White South Indian Dress,girls,productimages/PG20PV01WH.JPG,1 to 2  year,White ,1,TRUE,White South indian Dress with Silk Print at the edges ,50,10,TRUE,products-page
+19,variable,SS21LC12PI12,Pink and Yellow Chaniya Choli,girls,productimages/SS21LC12PI.JPG,3-6 Months,Pink and Yellow,1,TRUE,Half Sleeve Pink and Yellow Chaniya Choli for Girls,45,,TRUE,products-page
