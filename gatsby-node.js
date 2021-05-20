@@ -41,6 +41,7 @@ const createPages = async ({actions,graphql}) => {
             edges {
                 node {
                     id
+                    sku
                     fields{
                         slug
                     }

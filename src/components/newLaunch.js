@@ -102,11 +102,11 @@ var settings = {
                         return(
                             <Link 
                                 key={node.id}
-                                to={`http://localhost:8000/${node.productCategory}/${node.fields.slug}`}
+                                to={`${process.env.WEBURL}/${node.productCategory}/${node.fields.slug}`}
                                 className="hover:text-black"
                                 >
                             <div className="item items-center">
-                            <GatsbyImage image={newLaunchproductImage} alt="pimage" className="m-2" />
+                            <GatsbyImage image={newLaunchproductImage} alt="pimage" className="m-2 h-96" />
                             <div className="item-details p-1 mt-1">
                                 <p className="desc text-gray-400 capitalize font-normal">{node.name}</p>
                                 <p className="price pb-2 text-lg">$ {finalPrice} <span className=" text-red-500 line-through">$ {node.price}</span></p>

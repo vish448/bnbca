@@ -70,7 +70,7 @@ function Footer({metaData}) {
                         <ul>
                             <li className="p-2 sm:p-0"><AiFillInstagram className="inline-block m-1"/>: <a target="_blank" href="https://www.instagram.com/bownbeecanda">bownbeecanada</a> <br/>
                             </li>
-                            <li className="p-2 sm:p-0"><FaFacebookF className="inline-block m-1"/>: <a target="_blank" href="https://www.facebook.com/profile.php?id=100057448820311">bownbeecanada</a></li>
+                            <li className="p-2 sm:p-0"><FaFacebookF className="inline-block m-1"/>: <a target="_blank" href="https://www.facebook.com/BownBeeCanada/">bownbeecanada</a></li>
                             <p>We are one stop shop for all kids occassional dresses</p>
 
                         </ul>
