@@ -85,7 +85,7 @@ export default function ProductPage({ data }) {
                         
                               
                     </div> 
-                    <div className="colors mb-8">
+                    <div className="colors mb-8 hidden">
                         <p className="tracking-wider mb-2">Color</p>
                         {productColors.map((color,index) => {
                             return (

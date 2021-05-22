@@ -1,5 +1,11 @@
-
 /* Top Slider */
+
+.top-reel {
+    background-color: #edcd1d;
+}
+.text-yellow-color {
+    color: #edcd1d
+}
 .banner {
     height: 35vw;
 }
