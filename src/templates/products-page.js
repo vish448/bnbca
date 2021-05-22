@@ -65,15 +65,18 @@ export default function ProductPage({ data }) {
                 </div>
                 <div>
                     <h1 className="product-name text-4xl pb-4">{data.productsCsv.name}</h1>
-                    <p className="price pb-2 text-lg">$ {finalPrice} <span className=" text-red-500 line-through">$ {data.productsCsv.price}</span></p>
-                    <p className="discount mb-4 "><span className="text-lg bg-green-600 text-white p-1">{discount}% OFF</span></p> 
+                    <p className={`price pb-2 text-lg ${discount ? 'block' : 'hidden'}`}>$ {finalPrice} <span className=" text-red-500 line-through">$ {data.productsCsv.price}</span></p>
+                    <p className={`price pb-2 text-lg ${discount ? 'hidden' : 'block'}`}>$ {data.productsCsv.price} </p>
+                    
+                    <p className={`discount mb-4 ${discount ? 'block' : 'hidden'}`}><span className="text-lg bg-green-600 text-white p-1">{discount}% OFF</span></p> 
+                    
                     <p className="text-gray-500 pb-2">SKU: {sku[0]}</p>
                     <div className="sizes mb-4">
                         <p className="tracking-wider mb-2">Size</p>
                         {productSizes.map((size, index) => {
                                 return (
                                     
-                                    <button className={`p-2 border-gray-200 border mr-2 hover:bg-black hover:text-white cursor-pointer focus:border-black ${activeSize === index ? 'bg-black text-white' : null}`} role="button" tabIndex={0} 
+                                    <button className={`p-2 border-gray-200 border mr-2 mb-2 hover:bg-black hover:text-white cursor-pointer focus:border-black ${activeSize === index ? 'bg-black text-white' : null}`} role="button" tabIndex={0} 
                                     onClick={() => {toggleSize(index); setSize(size)}}
                                     onKeyDown={() => {toggleSize(index); setSize(size)}} key={index}>{size}</button>
                                 )

@@ -129,7 +129,6 @@ const BoysPage = ({ data }) =>  {
                 <div className="product-list grid grid-cols-1 justify-items-center sm:grid-cols-4 gap-4 mb-8">
                     {csvItems.map( ({node} ) => {
                         const productImageFluidCsv = getImage(node.productImage)
-                        
                         if (node.colors === colorFilter) {
                             return(
         
@@ -145,7 +144,11 @@ const BoysPage = ({ data }) =>  {
                                 </Link>
                             )
                         }
-                        if(node.sizes === ageFilter){
+                        if(ageFilter){
+                        
+                        const sizes = node.sizes
+                        const filter = ageFilter.replace(' to ','-')
+                        if(sizes.includes(filter)){
                             return(
         
                                 <Link
@@ -160,6 +163,7 @@ const BoysPage = ({ data }) =>  {
                                     </div>  
                                 </Link>
                             )
+                        }
                         }
                         
                     })}

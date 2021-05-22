@@ -146,21 +146,27 @@ const GirlsPage = ({ data }) =>  {
                                 </Link>
                             )
                         }
-                        if(node.sizes == ageFilter){
-                            return(
-        
-                                <Link
-                                    key={node.id}
-                                    to={node.fields.slug}
-                                    >
-                                    <div className="product">
-                                        <GatsbyImage image={productImageFluidCsv} alt="pimage" />
-                                        <h1>{node.name}</h1>
-                                        <p>{node.price}</p>
-                                    </div>  
-                                </Link>
-                            )
-                        }
+                        if(ageFilter){
+                        
+                            const sizes = node.sizes
+                            const filter = ageFilter.replace(' to ','-')
+                            if(sizes.includes(filter)){
+                                return(
+            
+                                    <Link
+                                            key={node.id}
+                                            to={node.fields.slug}
+                                            
+                                            >
+                                        <div className="product">
+                                            <GatsbyImage image={productImageFluidCsv} alt="pimage" />
+                                            <h1>{node.name}</h1>
+                                            <p>{node.price}</p>
+                                        </div>  
+                                    </Link>
+                                )
+                            }
+                            }
                         
                     })}
                     
