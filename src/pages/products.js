@@ -20,7 +20,7 @@ const ProductPage = ({ data }) =>  {
             <ProductsList>
             <div className="products-list grid grid-cols-1 sm:grid-cols-5 gap-0 sm:gap-4 p-2 sm:p-8">
             FILTER BY:
-                <aside className="grid grid-cols-2 sm:grid-cols-1 col-start-1">
+                <aside className="grid-cols-2 sm:grid-cols-1 col-start-1">
                 <div className="colorFilter w-40">
                     <h1 className="underline mb-2 text-lg mt-5">COLOR</h1>
                     {productsFilter.map(({node})=> {
@@ -57,18 +57,29 @@ const ProductPage = ({ data }) =>  {
             <div className="product-list grid grid-cols-1 justify-items-center sm:justify-items-start sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
             {csvItems.map( ({node} ) => {
                         const productImageFluidCsv = getImage(node.productImage)
+                        let discountedRate
+                        let finalPrice
+                        let discount = node.discount
+                        console.log('dis', discount)
+                        const price = node.price
+                        if(discount){
+                            discountedRate = price - ((price * discount)/100)
+                            finalPrice = discountedRate.toFixed(2)
+                        }
                             return(
         
                                 <Link
                                         key={node.id}
                                         //TODO -- Change the URL as per your Environment
-                                        to={`https://dev--bnbca.netlify.app/${node.productCategory}/${node.fields.slug}`}
+                                        to={`${process.env.WEBURL}/${node.productCategory}/${node.fields.slug}`}
                                         
                                         >
                                     <div className="product">
                                         <GatsbyImage image={productImageFluidCsv} alt="pimage" />
                                         <h1>{node.name}</h1>
-                                        <p>{node.price}</p>
+                                        <p className={`price text-black pb-2 text-lg ${discount ? 'block' : 'hidden'}`}>$ {finalPrice} <span className=" text-red-500 line-through">$ {node.price}</span><span className="text-lg bg-green-600 text-white p-1 ml-2">{discount}% OFF</span></p>
+                                        <p className={`price pb-2 text-lg ${discount ? 'hidden' : 'block'}`}>$ {node.price} </p>
+                                        
                                     </div>  
                                 </Link>
                             )
@@ -85,7 +96,7 @@ const ProductPage = ({ data }) =>  {
             <ProductsList>
             <div className="products-list grid grid-cols-1 sm:grid-cols-5 gap-0 sm:gap-4 p-2 justify-items-center sm:justify-items-start sm:p-8">
                 FILTER BY:
-                <aside className="grid grid-cols-2 sm:grid-cols-1 col-start-1">
+                <aside className="grid-cols-2 sm:grid-cols-1 col-start-1">
                 <div className="colorFilter w-40">
                     <h1 className="underline mb-2 text-lg mt-5">COLOR</h1>
                     {productsFilter.map(({node})=> {
@@ -129,7 +140,15 @@ const ProductPage = ({ data }) =>  {
                 <div className="product-list grid grid-cols-1 justify-items-center sm:grid-cols-4 gap-4 mb-8">
                     {csvItems.map( ({node} ) => {
                         const productImageFluidCsv = getImage(node.productImage)
-                        
+                        let discountedRate
+                        let finalPrice
+                        let discount = node.discount
+                        console.log('dis', discount)
+                        const price = node.price
+                        if(discount){
+                            discountedRate = price - ((price * discount)/100)
+                            finalPrice = discountedRate.toFixed(2)
+                        }
                         if (node.colors == colorFilter) {
                             return(
         
@@ -142,25 +161,36 @@ const ProductPage = ({ data }) =>  {
                                         <GatsbyImage image={productImageFluidCsv} alt="pimage" />
                                         <h1>{node.name}</h1>
                                         <p>{node.price}</p>
+                                        <p className={`price text-black pb-2 text-lg ${discount ? 'block' : 'hidden'}`}>$ {finalPrice} <span className=" text-red-500 line-through">$ {node.price}</span><span className="text-lg bg-green-600 text-white p-1 ml-2">{discount}% OFF</span></p>
+                                        <p className={`price pb-2 text-lg ${discount ? 'hidden' : 'block'}`}>$ {node.price} </p>
+                                        
                                     </div>  
                                 </Link>
                             )
                         }
-                        if(node.sizes == ageFilter){
-                            return(
-        
-                                <Link
-                                    key={node.id}
-                                    to={node.fields.slug}
-                                    >
-                                    <div className="product">
-                                        <GatsbyImage image={productImageFluidCsv} alt="pimage" />
-                                        <h1>{node.name}</h1>
-                                        <p>{node.price}</p>
-                                    </div>  
-                                </Link>
-                            )
-                        }
+                        if(ageFilter){
+                        
+                            const sizes = node.sizes
+                            const filter = ageFilter.replace(' to ','-')
+                            if(sizes.includes(filter)){
+                                return(
+            
+                                    <Link
+                                            key={node.id}
+                                            to={node.fields.slug}
+                                            
+                                            >
+                                        <div className="product">
+                                            <GatsbyImage image={productImageFluidCsv} alt="pimage" />
+                                            <h1>{node.name}</h1>
+                                            <p className={`price text-black pb-2 text-lg ${discount ? 'block' : 'hidden'}`}>$ {finalPrice} <span className=" text-red-500 line-through">$ {node.price}</span><span className="text-lg bg-green-600 text-white p-1 ml-2">{discount}% OFF</span></p>
+                                            <p className={`price pb-2 text-lg ${discount ? 'hidden' : 'block'}`}>$ {node.price} </p>
+                                            
+                                        </div>  
+                                    </Link>
+                                )
+                            }
+                            }
                         
                     })}
                     
@@ -189,7 +219,7 @@ export const ProductPageQuery = graphql`
                     }
                 }
             }   
-        allProductsCsv {
+        allProductsCsv(filter: {type: {eq: "variable"}}) {
             edges {
               node {
                 id

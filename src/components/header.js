@@ -4,10 +4,13 @@ import { Link } from 'gatsby'
 import { StaticImage } from "gatsby-plugin-image"
 import Nav from "./nav"
 import MobileMenu from './mobileMenu'
+import { MdCall } from "react-icons/md";
+
 
 function Header({siteTitle}) {
     return(
             <>
+            <div className="h-10 text-black text-center text-xl p-1 top-reel font-bold"> Free Shipping across GTA </div>
             <header className="container mx-auto">
                 <Helmet>
                     {siteTitle}
@@ -16,10 +19,11 @@ function Header({siteTitle}) {
                     <div className="block sm:hidden">
                         <MobileMenu />
                     </div>
+                    <div className="grid justify-items-end items-center grid-cols-2"><MdCall className="float-left m-1 text-yellow-color"/><a href="tel:6476757590">+1 (647) 675-7590</a></div>
                     <Link to="/" className="hidden sm:block col-start-2">
                         <StaticImage 
                             src="../images/logo.png" 
-                            alt="A dinosaur"
+                            alt="Logo"
                             placeholder="blurred"
                             layout="fixed"
                             width={217}
@@ -28,7 +32,7 @@ function Header({siteTitle}) {
                     <Link to="/" className="block sm:hidden col-start-2">
                         <StaticImage 
                             src="../images/logo.png" 
-                            alt="A dinosaur"
+                            alt="Logo"
                             placeholder="blurred"
                             layout="fixed"
                             width={110}

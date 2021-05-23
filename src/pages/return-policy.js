@@ -1,8 +1,17 @@
 import React from 'react';
+import {Helmet} from 'react-helmet'
 
 const RetrunPolicy = () => {
     return (
         <div id="return-policy">
+        <Helmet>
+            <meta charSet="utf-8" />
+            <title>Return Policy | Bownbee Canada</title>
+            <meta name="description" content="BownBee.ca's Return and Exchange Policy offers you the option to return or exchange items purchased on bownbee.ca within 48 hours of receipt."/>
+            <meta name="keywords" content="Hassle Free Return for kids Wear, Bownbee, Bownbeecanada, Bownbeeca" />
+
+            <link rel="canonical" href="https://www.bownbee.ca/about-us" />
+        </Helmet>
         <div className="breadcrumb h-8 bg-gray-100 grid justify-items-center content-center">Return Policy
         </div>
         <div className="lg:container lg:mx-auto p-10">

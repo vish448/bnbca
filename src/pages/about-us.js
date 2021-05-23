@@ -1,10 +1,19 @@
 import React from 'react'
 import { StaticImage } from "gatsby-plugin-image"
+import {Helmet} from 'react-helmet'
 
 
 const AboutUsPage = ()=> {
     return (
         <>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>About | Bownbee Canada</title>
+                <meta name="description" content="BownBee Canada is connecting kids to their culture and origin. We are one stop shop for all kids Indian traditional wear and accessories." />
+                <meta name="keywords" content="Indian Traditional clothes for Kids, Bownbee, Bownbeecanada, Bownbeeca" />
+
+                <link rel="canonical" href="https://www.bownbee.ca/about-us" />
+            </Helmet>
             <div className="breadcrumb h-8 bg-gray-100 grid justify-items-center content-center">About BownBee
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-1 gap-0 sm:gap-4 p-8 ">

@@ -1,8 +1,17 @@
 import React from 'react';
+import {Helmet} from 'react-helmet'
 
 const ShippingPolicyPage = () => {
     return (
         <div id="shipping-policy">
+        <Helmet>
+            <meta charSet="utf-8" />
+            <title>Shipping Policy | Bownbee Canada</title>
+            <meta name="description" content="BownBee Canada is connecting kids to their culture and origin. We are one stop shop for all kids Indian traditional wear and accessories." />
+            <meta name="keywords" content="Ship Indian traditional wear in North America,Bownbee, Bownbeecanada, Bownbeeca" />
+
+            <link rel="canonical" href="https://www.bownbee.ca/about-us" />
+        </Helmet>
         <div className="breadcrumb h-8 bg-gray-100 grid justify-items-center content-center">Shipping Policy
         </div>
         <div className="lg:container lg:mx-auto p-10">

@@ -1,15 +1,14 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import { StaticImage } from "gatsby-plugin-image"
+import { Link} from 'gatsby'
+import { StaticImage, getImage, GatsbyImage } from "gatsby-plugin-image"
 import { MdLocalShipping, MdCollectionsBookmark } from "react-icons/md";
 import { AiFillInstagram} from "react-icons/ai";
 import { FaFacebookF, FaShippingFast } from "react-icons/fa";
 
-
-function Footer({metaData}) {
+const Footer = ({metaData})=> {
     return(
         
-            <footer>
+            <footer className="mt-10">
                 <div className="footer-top h-40 md:grid grid-cols-3 hidden justify-items-center items-center bg-yellow-300">
                     <div className="grid grid-cols-2">
                         <MdLocalShipping className="text-8xl justify-self-center"/>
@@ -70,7 +69,7 @@ function Footer({metaData}) {
                         <ul>
                             <li className="p-2 sm:p-0"><AiFillInstagram className="inline-block m-1"/>: <a target="_blank" href="https://www.instagram.com/bownbeecanda">bownbeecanada</a> <br/>
                             </li>
-                            <li className="p-2 sm:p-0"><FaFacebookF className="inline-block m-1"/>: <a target="_blank" href="https://www.facebook.com/profile.php?id=100057448820311">bownbeecanada</a></li>
+                            <li className="p-2 sm:p-0"><FaFacebookF className="inline-block m-1"/>: <a target="_blank" href="https://www.facebook.com/BownBeeCanada/">bownbeecanada</a></li>
                             <p>We are one stop shop for all kids occassional dresses</p>
 
                         </ul>

@@ -1,5 +1,11 @@
-
 /* Top Slider */
+
+.top-reel {
+    background-color: #edcd1d;
+}
+.text-yellow-color {
+    color: #edcd1d
+}
 .banner {
     height: 35vw;
 }
@@ -19,5 +25,23 @@
 }
 .slides .slick-prev:before,
 .slides .slick-next::before {
+   color: #000000;
+}
+.newLaunchSlide .slick-prev,
+.newLaunchSlide .slick-next {
+    position: absolute;
+    top: 42%;
+    z-index: 99999;
+    color:black;
+}
+
+.newLaunchSlide .slick-prev {
+    left: -2%;
+}
+.newLaunchSlide .slick-next {
+    right: -2%;
+}
+.newLaunchSlide .slick-prev:before,
+.newLaunchSlide .slick-next::before {
    color: #000000;
 }
