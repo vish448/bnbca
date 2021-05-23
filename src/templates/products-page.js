@@ -34,21 +34,7 @@ export default function ProductPage({ data }) {
         setActiveColor((activeColor) => (activeColor === index ? null : index))
     }
 
-    const settings = {
-        customPaging: function(i) {
-          return (
-            <a>
-              <img src={productImageFluid} />
-            </a>
-          );
-        },
-        dots: true,
-        dotsClass: "slick-dots slick-thumb",
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1
-      };
+ 
       let productSizeBuffer = ''
       let productSizeOptions = ''
     return (
@@ -58,11 +44,11 @@ export default function ProductPage({ data }) {
             </div>
             <div className="grid grid-cols-1 justify-items-center sm:justify-items-start sm:grid-cols-2 gap-10 p-14 container mx-auto">
                 <div className="grid grid-cols-1">
-                    <Slider {...settings}>
+                    
                         <div>
                             <GatsbyImage image={productImageFluid} alt="pimage"/>
                         </div>
-                    </Slider>
+                   
                     
                 </div>
                 <div>
