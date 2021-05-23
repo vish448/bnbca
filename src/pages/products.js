@@ -60,7 +60,6 @@ const ProductPage = ({ data }) =>  {
                         let discountedRate
                         let finalPrice
                         let discount = node.discount
-                        console.log('dis', discount)
                         const price = node.price
                         if(discount){
                             discountedRate = price - ((price * discount)/100)
@@ -143,7 +142,6 @@ const ProductPage = ({ data }) =>  {
                         let discountedRate
                         let finalPrice
                         let discount = node.discount
-                        console.log('dis', discount)
                         const price = node.price
                         if(discount){
                             discountedRate = price - ((price * discount)/100)
