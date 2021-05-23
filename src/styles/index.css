@@ -1,7 +1,47 @@
+/* Top Slider */
+
+.top-reel {
+    background-color: #edcd1d;
+}
+.text-yellow-color {
+    color: #edcd1d
+}
 .banner {
-    background-image:url("../images/hero-banner-2.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     height: 35vw;
+}
+.slides .slick-prev,
+.slides .slick-next {
+    position: absolute;
+    top: 50%;
+    z-index: 99999;
+    color:black;
+}
+
+.slides .slick-prev {
+    left: 3%;
+}
+.slides .slick-next {
+    right: 3%;
+}
+.slides .slick-prev:before,
+.slides .slick-next::before {
+   color: #000000;
+}
+.newLaunchSlide .slick-prev,
+.newLaunchSlide .slick-next {
+    position: absolute;
+    top: 42%;
+    z-index: 99999;
+    color:black;
+}
+
+.newLaunchSlide .slick-prev {
+    left: -2%;
+}
+.newLaunchSlide .slick-next {
+    right: -2%;
+}
+.newLaunchSlide .slick-prev:before,
+.newLaunchSlide .slick-next::before {
+   color: #000000;
 }
