@@ -1,8 +1,17 @@
 import React from 'react';
+import {Helmet} from 'react-helmet'
 
 const FaqsPage = () => {
     return (
         <div id="faqa">
+            <Helmet>
+            <meta charSet="utf-8" />
+            <title>FAQ | Bownbee Canada</title>
+            <meta name="description" content="BownBee Canada is connecting kids to their culture and origin. We are one stop shop for all kids Indian traditional wear and accessories." />
+            <meta name="keywords" content="Ethinic wear, Indian Kids,Bownbee, Bownbeecanada, Bownbeeca" />
+
+            <link rel="canonical" href="https://www.bownbee.ca/contact-us" />
+        </Helmet>
         <div className="breadcrumb h-8 bg-gray-100 grid justify-items-center content-center">Frequently Asked Questions
         </div>
         <div className="lg:container lg:mx-auto p-10">

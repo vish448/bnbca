@@ -14,7 +14,6 @@ const GirlsPage = ({ data }) =>  {
         setColorFilter(null);
         setAgeFilter(null);
     }
-
     if (colorFilter == null && ageFilter == null) {
         return ( 
             <ProductsList>
@@ -57,6 +56,15 @@ const GirlsPage = ({ data }) =>  {
                 <div className="product-list grid grid-cols-1 justify-items-center sm:justify-items-start sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
                     {csvItems.map( ({node} ) => {
                         const productImageFluidCsv = getImage(node.productImage)
+                        let discountedRate
+                        let finalPrice
+                        let discount = node.discount
+                        console.log('dis', discount)
+                        const price = node.price
+                        if(discount){
+                            discountedRate = price - ((price * discount)/100)
+                            finalPrice = discountedRate.toFixed(2)
+                        }
                             return(
         
                                 <Link
@@ -67,7 +75,9 @@ const GirlsPage = ({ data }) =>  {
                                     <div className="product">
                                         <GatsbyImage image={productImageFluidCsv} alt="pimage" />
                                         <h1>{node.name}</h1>
-                                        <p>{node.price}</p>
+                                        <p className={`price text-black pb-2 text-lg ${discount ? 'block' : 'hidden'}`}>$ {finalPrice} <span className=" text-red-500 line-through">$ {node.price}</span><span className="text-lg bg-green-600 text-white p-1 ml-2">{discount}% OFF</span></p>
+                                        <p className={`price pb-2 text-lg ${discount ? 'hidden' : 'block'}`}>$ {node.price} </p>
+                                        
                                     </div>  
                                 </Link>
                             )
@@ -129,7 +139,15 @@ const GirlsPage = ({ data }) =>  {
                 <div className="product-list grid grid-cols-1 justify-items-center sm:grid-cols-4 gap-4 mb-8">
                     {csvItems.map( ({node} ) => {
                         const productImageFluidCsv = getImage(node.productImage)
-                        
+                        let discountedRate
+                        let finalPrice
+                        let discount = node.discount
+                        console.log('dis', discount)
+                        const price = node.price
+                        if(discount){
+                            discountedRate = price - ((price * discount)/100)
+                            finalPrice = discountedRate.toFixed(2)
+                        }
                         if (node.colors == colorFilter) {
                             return(
         
@@ -142,6 +160,9 @@ const GirlsPage = ({ data }) =>  {
                                         <GatsbyImage image={productImageFluidCsv} alt="pimage" />
                                         <h1>{node.name}</h1>
                                         <p>{node.price}</p>
+                                        <p className={`price text-black pb-2 text-lg ${discount ? 'block' : 'hidden'}`}>$ {finalPrice} <span className=" text-red-500 line-through">$ {node.price}</span><span className="text-lg bg-green-600 text-white p-1 ml-2">{discount}% OFF</span></p>
+                                        <p className={`price pb-2 text-lg ${discount ? 'hidden' : 'block'}`}>$ {node.price} </p>
+                                        
                                     </div>  
                                 </Link>
                             )
@@ -162,6 +183,9 @@ const GirlsPage = ({ data }) =>  {
                                             <GatsbyImage image={productImageFluidCsv} alt="pimage" />
                                             <h1>{node.name}</h1>
                                             <p>{node.price}</p>
+                                            <p className={`price text-black pb-2 text-lg ${discount ? 'block' : 'hidden'}`}>$ {finalPrice} <span className=" text-red-500 line-through">$ {node.price}</span><span className="text-lg bg-green-600 text-white p-1 ml-2">{discount}% OFF</span></p>
+                                            <p className={`price pb-2 text-lg ${discount ? 'hidden' : 'block'}`}>$ {node.price} </p>
+                                        
                                         </div>  
                                     </Link>
                                 )

@@ -1,8 +1,17 @@
 import React from 'react';
+import {Helmet} from 'react-helmet'
 
 const PrivacyPolicyPage = () => {
     return (
         <div id="privacy-policy">
+        <Helmet>
+            <meta charSet="utf-8" />
+            <title>Privacy Policy | Bownbee Canada</title>
+            <meta name="description" content="This Privacy Policy relates solely to the information collection and use practices of our web site located at https://www.bownbee.ca" />
+            <meta name="keywords" content="Indian Ethinic wear, North America,Bownbee, Bownbeecanada, Bownbeeca" />
+
+            <link rel="canonical" href="https://www.bownbee.ca/about-us" />
+        </Helmet>
             <div className="breadcrumb h-8 bg-gray-100 grid justify-items-center content-center">Privacy Policy
             </div>
             <div className="lg:container lg:mx-auto p-10">

@@ -1,76 +1,11 @@
 import React from 'react'
-import { Link, graphql, useStaticQuery } from 'gatsby'
+import { Link} from 'gatsby'
 import { StaticImage, getImage, GatsbyImage } from "gatsby-plugin-image"
 import { MdLocalShipping, MdCollectionsBookmark } from "react-icons/md";
 import { AiFillInstagram} from "react-icons/ai";
 import { FaFacebookF, FaShippingFast } from "react-icons/fa";
-import Slider from "react-slick";
-
-
 
 const Footer = ({metaData})=> {
-    const data = useStaticQuery(graphql`
-    query instaFeed {
-        allInstaNode {
-            edges {
-            node {
-                id
-                likes
-                mediaType
-                preview
-                original
-                timestamp
-                caption
-                localFile {
-                childImageSharp {
-                    gatsbyImageData(width: 288, placeholder: BLURRED)
-                }
-                }
-            }
-            }
-        }
-    }
-    `)
-    const instaFeed = data.allInstaNode.edges
-    var settings = {
-        dots: false,
-        infinite: true,
-        slidesToShow: 5,
-        slidesToScroll: 1,
-        initialSlide: 0,
-        autoplay: true,
-        speed: 500,
-        autoplaySpeed: 3000,
-        cssEase: "linear",
-        pauseOnHover: true,
-        className: 'instaFeed',
-        responsive: [
-          {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 3,
-              infinite: true,
-              dots: true
-            }
-          },
-          {
-            breakpoint: 600,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2,
-              initialSlide: 2
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          }
-        ]
-      }
     return(
         
             <footer className="mt-10">
@@ -97,20 +32,6 @@ const Footer = ({metaData})=> {
                         </div>
                     </div>
                     
-                </div>
-               
-                <div className="h-72 hidden">
-                
-                    {
-                        instaFeed.map(({node})=>{
-                          const instaImage = getImage(node.localFile)
-                          console.log(instaImage)
-                          return(
-                            <a href="https://www.instagram.com/bownbeecanada/" target="_blank"><GatsbyImage image={instaImage} alt="instaImage"/></a>
-                          )
-                        })
-                      }
-                  
                 </div>
                 <div className="md:h-80 sm:h-auto bg-gray-100 grid grid-cols-1 md:grid-cols-5 p-8 lg:p-20 sm:text-center">
                     <div className="text-center pt-0">

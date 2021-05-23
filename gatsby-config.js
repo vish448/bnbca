@@ -17,12 +17,13 @@ module.exports = {
         component: require.resolve(`./src/components/layout`)
       }
     },
-    'gatsby-plugin-postcss',
-    'gatsby-plugin-image',
+    `gatsby-plugin-postcss`,
+    `gatsby-plugin-image`,
     `gatsby-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-transformer-remark`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve:`gatsby-source-filesystem`,
       options: {
@@ -61,6 +62,12 @@ module.exports = {
         // If you do not provide a crossOrigin option, it will skip CORS for manifest.
         // Any invalid keyword or empty string defaults to `anonymous`
         crossOrigin: `use-credentials`,
+      },
+    },
+    {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        username: `47575967550`,
       },
     },
   ],

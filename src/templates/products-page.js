@@ -49,6 +49,8 @@ export default function ProductPage({ data }) {
         slidesToShow: 1,
         slidesToScroll: 1
       };
+      let productSizeBuffer = ''
+      let productSizeOptions = ''
     return (
         <>
             <div className="breadcrumb h-8 bg-gray-100 grid justify-items-center content-center">
@@ -74,11 +76,13 @@ export default function ProductPage({ data }) {
                     <div className="sizes mb-4">
                         <p className="tracking-wider mb-2">Size</p>
                         {productSizes.map((size, index) => {
+                            productSizeBuffer += size + '|'
                                 return (
                                     
                                     <button className={`p-2 border-gray-200 border mr-2 mb-2 hover:bg-black hover:text-white cursor-pointer focus:border-black ${activeSize === index ? 'bg-black text-white' : null}`} role="button" tabIndex={0} 
                                     onClick={() => {toggleSize(index); setSize(size)}}
                                     onKeyDown={() => {toggleSize(index); setSize(size)}} key={index}>{size}</button>
+                                    
                                 )
                             }
                         )}
@@ -96,8 +100,12 @@ export default function ProductPage({ data }) {
                             )
                             }
                         )}
+                        {productSizeOptions = productSizeBuffer.slice(0, -1)}
 
                     </div>  
+                    <div className="product-details mb-4">
+                        <p className="tracking-wider mb-2"><b>Available Quantity:</b> {data.productsCsv.stock} availble for each size. Please enquire for additonal quanity at <a href="tel:6476757590">(647) 675-7590</a></p>
+                    </div>
                     <div className="product-details mb-4">
                         <p className="tracking-wider mb-2 font-extrabold"><b>Product Details</b></p>
                         <div>{data.productsCsv.description}</div>
@@ -107,11 +115,11 @@ export default function ProductPage({ data }) {
                             data-item-price={finalPrice}
                             data-item-url={data.productsCsv.slug}
                             data-item-name={data.productsCsv.name}
-                            data-item-image={'https://dev--bnbca.netlify.app/' + productImage}
-                            data-item-custom1-name="size"
+                            data-item-image={`${process.env.WEBURL}` + productImage}
+                            data-item-custom1-name="size" 
                             data-item-custom1-value={size}
-                            data-item-custom2-name="color"
-                            data-item-custom2-value={color}
+                            data-item-custom1-options={productSizeOptions}
+                            data-item-max-quantity={data.productsCsv.stock}
                     >
                             Add to cart
                     </button>

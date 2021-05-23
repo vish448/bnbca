@@ -3,10 +3,19 @@ import { StaticImage } from "gatsby-plugin-image"
 import { FaFacebookF } from "react-icons/fa";
 import { AiTwotoneMail , AiFillInstagram} from "react-icons/ai";
 import { MdCall } from "react-icons/md";
+import {Helmet} from "react-helmet"
 
 const ContactUsPage = () => {
     return(
         <>
+        <Helmet>
+            <meta charSet="utf-8" />
+            <title>Contact | Bownbee Canada</title>
+            <meta name="description" content="BownBee Canada is connecting kids to their culture and origin. We are one stop shop for all kids Indian traditional wear and accessories." />
+            <meta name="keywords" content="Indian Traditional clothes in Canada, Bownbee, Bownbeecanada, Bownbeeca" />
+
+            <link rel="canonical" href="https://www.bownbee.ca/contact-us" />
+        </Helmet>
         <div className="breadcrumb h-8 bg-gray-100 grid justify-items-center content-center">Contact Us
         </div>
         <div className="container mx-auto p-10 grid grid-cols-1 sm:grid-cols-4">
