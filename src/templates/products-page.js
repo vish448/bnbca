@@ -101,7 +101,7 @@ export default function ProductPage({ data }) {
                             data-item-price={finalPrice}
                             data-item-url={data.productsCsv.slug}
                             data-item-name={data.productsCsv.name}
-                            data-item-image={`${process.env.WEBURL}` + productImage}
+                            
                             data-item-custom1-name="size" 
                             data-item-custom1-value={size}
                             data-item-custom1-options={productSizeOptions}
