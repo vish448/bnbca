@@ -15,7 +15,7 @@ export default function ProductPage({ data }) {
     const productSizes = data.productsCsv.sizes.split(',')
     const productColors = data.productsCsv.colors.split(',') 
     const sku = data.productsCsv.sku.split(',')  
-    const productImage = data.productsCsv.productImage.childImageSharp.gatsbyImageData.images.fallback.src
+    //const productImage = data.productsCsv.productImage.childImageSharp.gatsbyImageData.images.fallback.src
     if(discount){
         discountedRate = price - ((price * discount)/100)
         finalPrice = discountedRate.toFixed(2)
