@@ -15,7 +15,7 @@ export default function ProductPage({ data }) {
     const productSizes = data.productsCsv.sizes.split(',')
     const productColors = data.productsCsv.colors.split(',') 
     const sku = data.productsCsv.sku.split(',')  
-    //const productImage = data.productsCsv.productImage.childImageSharp.gatsbyImageData.images.fallback.src
+    const productImage = data.productsCsv.productImage.childImageSharp.gatsbyImageData.images.fallback.src
     if(discount){
         discountedRate = price - ((price * discount)/100)
         finalPrice = discountedRate.toFixed(2)
@@ -101,7 +101,7 @@ export default function ProductPage({ data }) {
                             data-item-price={finalPrice}
                             data-item-url={data.productsCsv.slug}
                             data-item-name={data.productsCsv.name}
-                            
+                            data-item-image={`${process.env.WEBURL}` + productImage}
                             data-item-custom1-name="size" 
                             data-item-custom1-value={size}
                             data-item-custom1-options={productSizeOptions}
