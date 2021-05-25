@@ -99,7 +99,7 @@ export default function ProductPage({ data }) {
                     <button className="btn bg-green-500 mt-4 snipcart-add-item p-4 rounded text-white"
                             data-item-id={data.productsCsv.id}
                             data-item-price={finalPrice}
-                            data-item-url={data.productsCsv.slug}
+                            data-item-url={`https://bownbee.ca/${data.productsCsv.productCategory}/${data.productsCsv.fields.slug}`}
                             data-item-name={data.productsCsv.name}
                             data-item-image={`${process.env.WEBURL}` + productImage}
                             data-item-custom1-name="size" 

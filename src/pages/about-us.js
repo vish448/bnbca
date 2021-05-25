@@ -22,7 +22,7 @@ const AboutUsPage = ()=> {
                     About<br/><span className="text-4xl">BownBee</span>
                 </aside>
                 <main className="sm:col-start-2 sm:col-span-3">
-                    <p>BownBee is one of the most loved ethnic kids online brand. A firm believer of Indian traditional handicrafts, weconstantly work towards introducing our traditions to young kids throughTraditional Indian and Fusionwear. BownBee products are made in India, locally-sourced, contemporary and affordable.We don’t produce in bulk so all our dresses are limited edition to ensure our little customers stand out of the crowd on every occasion!</p><br/>
+                    <p>BownBee is one of the most loved ethnic kids online brand. A firm believer of Indian traditional handicrafts, we constantly work towards introducing our traditions to young kids through traditional Indian and Fusionwear. BownBee products are made in India, locally-sourced, contemporary and affordable. We don’t produce in bulk so all our dresses are limited edition to ensure our little customers stand out of the crowd on every occasion!</p><br/>
 
                     <p>We work with artisans and weavers from different states to bring the right blend of regional crafts and in-house designs for our customers. This production model has helped these artisans with a regular and growing source of income.</p>
                 </main>
