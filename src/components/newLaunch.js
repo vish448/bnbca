@@ -93,7 +93,6 @@ var settings = {
                         let discountedRate
                         let finalPrice
                         const price = node.price
-                        console.log('price',price)
                         let discount = node.discount
                         if(discount){
                             discountedRate = price - ((price * discount)/100)

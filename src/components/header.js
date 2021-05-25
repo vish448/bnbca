@@ -10,7 +10,8 @@ import { MdCall } from "react-icons/md";
 function Header({siteTitle}) {
     return(
             <>
-            <div className="h-10 text-black text-center text-xl p-1 top-reel font-bold"> Free Shipping across GTA </div>
+            <div className="h-10 text-black text-center text-xl p-1 top-reel font-bold"> Free Shipping across GTA. 📣 25% Off on all items.</div>
+            <div className="h-5 p-1 text-center sm:block md:hidden"><MdCall className="text-center inline-block m-1 text-yellow-color"/><a href="tel:6476757590">+1 (647) 675-7590</a></div>
             <header className="container mx-auto">
                 <Helmet>
                     {siteTitle}
@@ -19,7 +20,7 @@ function Header({siteTitle}) {
                     <div className="block sm:hidden">
                         <MobileMenu />
                     </div>
-                    <div className="grid justify-items-end items-center grid-cols-2"><MdCall className="float-left m-1 text-yellow-color"/><a href="tel:6476757590">+1 (647) 675-7590</a></div>
+                    <div className="grid justify-items-end items-center grid-cols-2 hidden md:block"><MdCall className="float-left m-1 text-yellow-color"/><a href="tel:6476757590">+1 (647) 675-7590</a></div>
                     <Link to="/" className="hidden sm:block col-start-2">
                         <StaticImage 
                             src="../images/logo.png" 
