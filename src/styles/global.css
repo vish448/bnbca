@@ -20,5 +20,22 @@
     .bg-maroon-400 {
         background-color: #800000;
     }
-    
+    .bg-green-400 {
+        background-color: rgba(52, 211, 153) !important;
+    }
+    .bg-pink-400 {
+        background-color: rgba(244, 114, 182) !important;
+    }
+    .bg-yellow-400 {
+        background-color: rgba(251, 191, 36) !important;
+    }
+    .bg-blue-400 {
+        background-color: rgba(96, 165, 250) !important;
+    }
+    .bg-red-400 {
+        background-color: rgba(248, 113, 113) !important;
+    }
+    .bg-purple-400 {
+        background-color: rgba(167, 139, 250) !important;
+    }
 }
