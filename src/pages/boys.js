@@ -18,11 +18,10 @@ const BoysPage = ({ data }) =>  {
     if (colorFilter == null && ageFilter == null) {
         return ( 
             <ProductsList>
-            <div className="products-list grid grid-cols-1 sm:grid-cols-5 gap-0 sm:gap-4 p-2 sm:p-8">
-                FILTER BY:
+            <div className="products-list grid grid-cols-1 justify-items-center sm:grid-cols-5 gap-0 sm:gap-4 p-2 sm:p-8">
                 <aside className="grid-cols-2 sm:grid-cols-1 col-start-1">
+                FILTER BY:
                 <div className="grid colorFilter w-40">
-    
                 <h1 className="underline mb-2 text-lg mt-5">COLOR</h1>
                     {productsFilter.map(({node})=> {
                         const productColors = node.frontmatter.productColors
@@ -31,7 +30,7 @@ const BoysPage = ({ data }) =>  {
                             <>
                                 {productColors.map(color=> {
                                     return(
-                                        <p className="cursor-pointer" onClick={()=>setColorFilter(color)} onKeyDown={()=>setColorFilter(color)}>{color}</p>)
+                                        <p className="cursor-pointer" onClick={()=>setColorFilter(color)} onKeyDown={()=>setColorFilter(color)}><span className={`bg-${color}-400 h-4 w-4 inline-block mt-0 ml-0 mb-0 mr-2`}></span>{color}</p>)
                                 })}
                             </>
                         )
@@ -93,9 +92,9 @@ const BoysPage = ({ data }) =>  {
 
         return ( 
             <ProductsList>
-            <div className="products-list grid grid-cols-1 sm:grid-cols-5 gap-0 sm:gap-4 p-2 justify-items-center sm:justify-items-start sm:p-8">
-                FILTER BY:
+            <div className="products-list grid grid-cols-1 justify-items-center sm:grid-cols-5 gap-0 sm:gap-4 p-2 sm:p-8">
                 <aside className="grid-cols-2 sm:grid-cols-1 col-start-1">
+                FILTER BY:
                 <div className="grid colorFilter w-40">
                     <h1 className="underline mb-2 text-lg mt-5">COLOR</h1>
                     {productsFilter.map(({node})=> {
@@ -105,7 +104,7 @@ const BoysPage = ({ data }) =>  {
                             <>
                                 {productColors.map(color=> {
                                     return(
-                                        <p className="cursor-pointer" onClick={()=>setColorFilter(color)} onKeyDown={()=>setColorFilter(color)}>{color}</p>)
+                                        <p className="cursor-pointer" onClick={()=>setColorFilter(color)} onKeyDown={()=>setColorFilter(color)}><span className={`bg-${color}-400 h-4 w-4 inline-block mt-0 ml-0 mb-0 mr-2`}></span>{color}</p>)
                                 })}
                             </>
                         )
@@ -142,7 +141,6 @@ const BoysPage = ({ data }) =>  {
                         let discountedRate
                         let finalPrice
                         let discount = node.discount
-                        console.log('dis', discount)
                         const price = node.price
                         if(discount){
                             discountedRate = price - ((price * discount)/100)

@@ -27,7 +27,7 @@ const Footer = ({metaData})=> {
                     <div className="grid grid-cols-2">
                         <FaShippingFast className="text-8xl justify-self-center"/>
                         <div className="self-center">
-                        <h1 className="text-2xl">Express Shipping</h1>
+                        <h1 className="text-2xl">We Ship</h1>
                         <p> to North Americas</p>
                         </div>
                     </div>
@@ -67,7 +67,7 @@ const Footer = ({metaData})=> {
                     <div className="text-center sm:col-span-2 lg:col-span-1">
                         <h1 className="text:1xl lg:text-2xl pb-2 font-bold">Follow Us</h1>
                         <ul>
-                            <li className="p-2 sm:p-0"><AiFillInstagram className="inline-block m-1"/>: <a target="_blank" href="https://www.instagram.com/bownbeecanda">bownbeecanada</a> <br/>
+                            <li className="p-2 sm:p-0"><AiFillInstagram className="inline-block m-1"/>: <a target="_blank" href="https://www.instagram.com/bownbeecanada">bownbeecanada</a> <br/>
                             </li>
                             <li className="p-2 sm:p-0"><FaFacebookF className="inline-block m-1"/>: <a target="_blank" href="https://www.facebook.com/BownBeeCanada/">bownbeecanada</a></li>
                             <p>We are one stop shop for all kids occassional dresses</p>
