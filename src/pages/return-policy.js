@@ -15,7 +15,7 @@ const RetrunPolicy = () => {
         <div className="breadcrumb h-8 bg-gray-100 grid justify-items-center content-center">Return Policy
         </div>
         <div className="lg:container lg:mx-auto p-10">
-        <p>BownBee.com.au’s Return and Exchange Policy offers you the option to return or exchange items purchased on bownbee.com.au within 48 hours of receipt. In case of returns, we will refund you the money in the manner you have made the payment once the returned product is inspected by our team. If you choose to exchange the item for reason of mismatch of size or receipt of a defective item, you will be provided with a replacement of the item, free of cost. However an exchange is subject to availability of the item in our stock and a shipping cost will be charged.</p><br/>
+        <p>BownBee.ca’s Return and Exchange Policy offers you the option to return or exchange items purchased on bownbee.com.au within 48 hours of receipt. In case of returns, we will refund you the money in the manner you have made the payment once the returned product is inspected by our team. If you choose to exchange the item for reason of mismatch of size or receipt of a defective item, you will be provided with a replacement of the item, free of cost. However an exchange is subject to availability of the item in our stock and a shipping cost will be charged.</p><br/>
        
         <ul className="list-disc list-inside"><span className="font-bold uppercase text-lg">How to exchange:</span>
             <li>To request a return, please send mail to <a href="mailto:bownbeecanada@gmail.com">bownbeecanada@gmail.com</a> within 48 hrs of receiving the product.</li>
