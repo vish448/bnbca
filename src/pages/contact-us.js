@@ -22,7 +22,7 @@ const ContactUsPage = () => {
             <div className="col-start-1 col-span-2 justify-self-center self-center">
                 <AiTwotoneMail className="float-left m-1"/>: <a href="mailto:bownbeecanada@gmail.com">bownbeecanada@gmail.com </a><br/>
                 <FaFacebookF className="float-left m-1"/>: <a href="https://www.facebook.com/BownBeeCanada/">bownbeecanada</a> <br/>
-                <AiFillInstagram className="float-left m-1"/>: <a href="https://www.instagram.com/bownbeecanda">bownbeecanada</a> <br/>
+                <AiFillInstagram className="float-left m-1"/>: <a href="https://www.instagram.com/bownbeecanada">bownbeecanada</a> <br/>
                 <MdCall className="float-left m-1"/>: <a href="tel:6476757590">+1 (647) 675-7590</a> <br/>
 
             </div>

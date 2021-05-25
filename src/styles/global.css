@@ -13,5 +13,12 @@
     button:focus {
         outline: 0;
     }
+    .bg-black-400,
+    .text-black-400 {
+        background-color: #000000;
+    }
+    .bg-maroon-400 {
+        background-color: #800000;
+    }
     
 }
