@@ -6543,6 +6543,11 @@ gatsby-plugin-snipcart@^1.1.2:
   resolved "https://registry.yarnpkg.com/gatsby-plugin-snipcart/-/gatsby-plugin-snipcart-1.1.2.tgz#ac2e672ae4fec200ecfce81f267e6e95040131a5"
   integrity sha512-p3qpYVbedxqxWUJ42qhZKF9dbmGwi0mHvUZZ53/FcNoFrp3AeWFah86+YWkgPuERlliQBRUuZoW1gNV13ONnlA==
 
+gatsby-plugin-snipcartv3@^2.3.3:
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-snipcartv3/-/gatsby-plugin-snipcartv3-2.3.3.tgz#ac61a94f0460f3df482f0b32345fa4b6d4241435"
+  integrity sha512-Lsy5YkvbH1G9lE3fi8XGJi/8ykFTLMqa515+b2g1PFgOJDN/i1Kp/ljGAypPkpF5ZP4EL1VOJDIStrgiNsuIEg==
+
 gatsby-plugin-typescript@^3.4.0:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-typescript/-/gatsby-plugin-typescript-3.4.0.tgz#da6b402bb6cf19160c24df46853c366560669e7b"

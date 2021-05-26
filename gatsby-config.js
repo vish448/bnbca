@@ -40,7 +40,7 @@ module.exports = {
     },
     `gatsby-transformer-csv`,
     {
-      resolve:`gatsby-plugin-snipcart`,
+      resolve:`gatsby-plugin-snipcartv3`,
       options: {
         apiKey:process.env.SNIPCART,
         js: `https://cdn.snipcart.com/themes/v3.0.3/default/snipcart.js`,

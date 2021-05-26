@@ -94,11 +94,19 @@ export default function ProductPage({ data }) {
                     </div>
                     <div className="product-details mb-4">
                         <p className="tracking-wider mb-2 font-extrabold"><b>Product Details</b></p>
-                        <div>{data.productsCsv.description}</div>
+                        <div>{data.productsCsv.productDetails}</div>
+                        <b>Specifications</b>
+                        <div>Brand Name - Bownbee</div>
+                        <div>Sleeves - {data.productsCsv.sleeves}</div>
+                        <div>Material - {data.productsCsv.materialName}</div>
+                        <div>Neck - {data.productsCsv.neckType}</div>
+                        <div>Fabric - {data.productsCsv.fabricType}</div><br/>
+                        <p>Items Included in the Package</p>
+                        <div>{data.productsCsv.packaging}</div>
                     </div>
                     <button className="btn bg-green-500 mt-4 snipcart-add-item p-4 rounded text-white"
                             data-item-id={data.productsCsv.id}
-                            data-item-price={finalPrice}    
+                            data-item-price={finalPrice}
                             data-item-url={`https://bownbee.ca/${data.productsCsv.productCategory}/${data.productsCsv.fields.slug}`}
                             data-item-name={data.productsCsv.name}
                             data-item-image={`https://bownbee.ca` + productImage}
@@ -106,6 +114,9 @@ export default function ProductPage({ data }) {
                             data-item-custom1-value={size}
                             data-item-custom1-options={productSizeOptions}
                             data-item-max-quantity={data.productsCsv.stock}
+                            data-item-custom3-name="Readonly information"
+                            data-item-custom3-type="readonly"
+                            data-item-custom3-value="This is a readonly custom field"
                     >
                             Add to cart
                     </button>
@@ -140,6 +151,12 @@ export const pageQuery = graphql`
           gatsbyImageData(width: 600, placeholder: BLURRED)
         }
       }
+      productDetails
+      sleeves
+      neckType
+      materialName
+      packaging
+      fabricType
     }
   } 
 `   
