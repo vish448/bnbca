@@ -32,8 +32,6 @@ const FaqsPage = () => {
                 of payment.</li>
                 <li>You can either register or make a payment as a guest. We are against spamming and will not share your contacts with anyone.</li>
             </ol><br/>
-            <p className="text-2xl font-bold">ANY HIDDEN TAXES OR CHARGES?</p>
-            <p>Not at all.</p><br/>
             <p className="text-2xl font-bold">HOW DO I KNOW MY ORDER HAS BEEN CONFIRMED?</p>
             <p>Once your order has been logged and payment authorization has been received, the BownBeeCanada team confirms receipt of the order and begins processing it. You will receive an email containing the details of your order when the seller receives it and confirms the same. In the e-mail you will be provided with a unique Order ID (eg. Order # XXXX), a listing of the item(s) you have ordered and the expected delivery time.</p><br/>
             <p className="text-2xl font-bold">CAN I ORDER A PRODUCT THAT IS ‘OUT OF STOCK’?</p>
