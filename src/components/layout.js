@@ -17,7 +17,7 @@ function Layout({children}) {
         }
       }
     }
-  `)
+  `) 
     return(
         <>
             <div className="h-screen grid justify-items-center items-center">
