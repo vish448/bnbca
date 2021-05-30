@@ -11,8 +11,35 @@ Global styles
     --heading-color: #000;
     --navigation-color: #333745;
     --navigation-hover-color: #f9c40d;
-  
   }
+
+  /* color classes */
+
+  .bg-black-400,
+    .text-black-400 {
+        background-color: #000000;
+    }
+    .bg-maroon-400 {
+        background-color: #800000;
+    }
+    .bg-green-400 {
+        background-color: rgba(52, 211, 153) !important;
+    }
+    .bg-pink-400 {
+        background-color: rgba(244, 114, 182) !important;
+    }
+    .bg-yellow-400 {
+        background-color: rgba(251, 191, 36) !important;
+    }
+    .bg-blue-400 {
+        background-color: rgba(96, 165, 250) !important;
+    }
+    .bg-red-400 {
+        background-color: rgba(248, 113, 113) !important;
+    }
+    .bg-purple-400 {
+        background-color: rgba(167, 139, 250) !important;
+    }
 
 /* Header Component */
 nav a {
@@ -165,6 +192,9 @@ nav a {
 /* Product Pages */
 .colorFilter > p {
   text-transform: uppercase;
+}
+.product img {
+  min-height: 400px;
 }
 /* Media Queries */
 
