@@ -46,7 +46,7 @@ function Header({siteTitle}) {
                             </span>
                             <span className="snipcart-items-count inline-block align-middle p-1"></span>
                         </button>
-                        <button className="snipcart-customer-signin hidden sm:block ">My account</button>
+                        <button className="snipcart-customer-signin hidden">My account</button>
                     </div>
                 </div>
                 <div className="hidden sm:block">
