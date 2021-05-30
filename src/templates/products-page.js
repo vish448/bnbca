@@ -90,7 +90,7 @@ export default function ProductPage({ data }) {
 
                     </div>  
                     <div className="product-details mb-4">
-                        <p className="tracking-wider mb-2"><b>Available Quantity:</b> {data.productsCsv.stock} availble for each size. Please enquire for additonal quanity at <a href="tel:6476757590">(647) 675-7590</a></p>
+                        <p className="tracking-wider mb-2"><b>Available Quantity:</b> {data.productsCsv.stock} availble for each size. Please enquire for additonal quanity at <a href="tel:9052696233">(905) 269-6233</a></p>
                     </div>
                     <div className="product-details mb-4">
                         <p className="tracking-wider mb-2 font-extrabold"><b>Product Details</b></p>
