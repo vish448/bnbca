@@ -76,8 +76,8 @@ const ProductPage = ({ data }) =>  {
                                     <div className="product">
                                         <GatsbyImage image={productImageFluidCsv} alt="pimage" />
                                         <h1>{node.name}</h1>
-                                        <p className={`price text-black pb-2 text-lg ${discount ? 'block' : 'hidden'}`}>$ {finalPrice} <span className=" text-red-500 line-through">$ {node.price}</span><span className="text-lg bg-green-600 text-white p-1 ml-2">{discount}% OFF</span></p>
-                                        <p className={`price pb-2 text-lg ${discount ? 'hidden' : 'block'}`}>$ {node.price} </p>
+                                        <p className={`price text-black pb-2 text-lg`}>$ {node.discountedPrice} <span className=" text-red-500 line-through">$ {node.price}</span><span className="text-lg bg-green-600 text-white p-1 ml-2 hidden">{discount}% OFF</span></p>
+                                        <p className={`price pb-2 text-lg ${discount ? 'hidden' : 'hidden'}`}>$ {node.price} </p>
                                         
                                     </div>  
                                 </Link>
@@ -159,8 +159,8 @@ const ProductPage = ({ data }) =>  {
                                         <GatsbyImage image={productImageFluidCsv} alt="pimage" />
                                         <h1>{node.name}</h1>
                                         <p>{node.price}</p>
-                                        <p className={`price text-black pb-2 text-lg ${discount ? 'block' : 'hidden'}`}>$ {finalPrice} <span className=" text-red-500 line-through">$ {node.price}</span><span className="text-lg bg-green-600 text-white p-1 ml-2">{discount}% OFF</span></p>
-                                        <p className={`price pb-2 text-lg ${discount ? 'hidden' : 'block'}`}>$ {node.price} </p>
+                                        <p className={`price text-black pb-2 text-lg`}>$ {node.discountedPrice} <span className=" text-red-500 line-through">$ {node.price}</span><span className="text-lg bg-green-600 text-white p-1 ml-2 hidden">{discount}% OFF</span></p>
+                                        <p className={`price pb-2 text-lg ${discount ? 'hidden' : 'hidden'}`}>$ {node.price} </p>
                                         
                                     </div>  
                                 </Link>
@@ -181,8 +181,8 @@ const ProductPage = ({ data }) =>  {
                                         <div className="product">
                                             <GatsbyImage image={productImageFluidCsv} alt="pimage" />
                                             <h1>{node.name}</h1>
-                                            <p className={`price text-black pb-2 text-lg ${discount ? 'block' : 'hidden'}`}>$ {finalPrice} <span className=" text-red-500 line-through">$ {node.price}</span><span className="text-lg bg-green-600 text-white p-1 ml-2">{discount}% OFF</span></p>
-                                            <p className={`price pb-2 text-lg ${discount ? 'hidden' : 'block'}`}>$ {node.price} </p>
+                                            <p className={`price text-black pb-2 text-lg`}>$ {node.discountedPrice} <span className=" text-red-500 line-through">$ {node.price}</span><span className="text-lg bg-green-600 text-white p-1 ml-2 hidden">{discount}% OFF</span></p>
+                                            <p className={`price pb-2 text-lg ${discount ? 'hidden' : 'hidden'}`}>$ {node.price} </p>
                                             
                                         </div>  
                                     </Link>
@@ -231,6 +231,7 @@ export const ProductPageQuery = graphql`
                 colors
                 templateKey
                 price
+                discountedPrice
                 discount
                 fields{
                     slug

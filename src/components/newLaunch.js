@@ -24,6 +24,7 @@ const NewLaunch = () => {
             colors
             templateKey
             price
+            discountedPrice
             discount
             fields {
                 slug
@@ -108,7 +109,7 @@ var settings = {
                             <GatsbyImage image={newLaunchproductImage} alt="pimage" className="m-2 h-96" />
                             <div className="item-details p-1 mt-1">
                                 <p className="desc text-gray-400 capitalize font-normal">{node.name}</p>
-                                <p className="price pb-2 text-lg">$ {finalPrice} <span className=" text-red-500 line-through">$ {node.price}</span></p>
+                                <p className="price pb-2 text-lg">$ {node.discountedPrice} <span className=" text-red-500 line-through">$ {node.price}</span></p>
                             </div>
                             </div>
                             </Link>

@@ -14,7 +14,7 @@ const Home = ({data}) => {
     <Helmet>
       <meta charSet="utf-8" />
       <title> Home | Bownbee Canada</title>
-      <meta name="description" content="BownBee Canda is connecting kids to their culture and origin. We are one stop shop for all kids Indian traditional wear and accessories. Ethinic indian wear for kids." />
+      <meta name="description" content="BownBee Canada is connecting kids to their culture and origin. We are one stop shop for all kids Indian traditional wear and accessories. Ethinic indian wear for kids." />
       <meta name="keywords" content="Ethinic wear, Indian ethinic wear, Indian Kids clothing, Indian traditional cloths, Festival clothing, Girls dresses, Indian girls dresses, Indian boys cloths, Kurta pijama, Salvar for girls, Punbabi girls dresses, Navrati dresses for kids, Indian Traditional wear, Indian accessories Girls, Bownbee, Bownbeecanada, Bownbeeca" />
     
       <link rel="canonical" href="https://www.bownbee.ca/" />

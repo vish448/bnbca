@@ -53,8 +53,8 @@ export default function ProductPage({ data }) {
                 </div>
                 <div>
                     <h1 className="product-name text-4xl pb-4">{data.productsCsv.name}</h1>
-                    <p className={`price pb-2 text-lg ${discount ? 'block' : 'hidden'}`}>$ {finalPrice} <span className=" text-red-500 line-through">$ {data.productsCsv.price}</span></p>
-                    <p className={`price pb-2 text-lg ${discount ? 'hidden' : 'block'}`}>$ {data.productsCsv.price} </p>
+                    <p className={`price pb-2 text-lg ${discount ? 'hidden' : 'block'}`}>$ {data.productsCsv.discountedPrice} <span className=" text-red-500 line-through">$ {data.productsCsv.price}</span></p>
+                    <p className={`price pb-2 text-lg ${discount ? 'hidden' : 'hidden'}`}>$ {data.productsCsv.price} </p>
                     
                     <p className={`discount mb-4 ${discount ? 'block' : 'hidden'}`}><span className="text-lg bg-green-600 text-white p-1">{discount}% OFF</span></p> 
                     
@@ -100,23 +100,28 @@ export default function ProductPage({ data }) {
                         <div>Sleeves - {data.productsCsv.sleeves}</div>
                         <div>Material - {data.productsCsv.materialName}</div>
                         <div>Neck - {data.productsCsv.neckType}</div>
-                        <div>Fabric - {data.productsCsv.fabricType}</div><br/>
+                        <div>Fabric - {data.productsCsv.fabricType}</div>
+                        <div>WaistBand - {data.productsCsv.waistBand}</div>
+                        <div>Fir - {data.productsCsv.fit}</div><br/>
+                        <p>Washing Instructions</p>
+                        <div>{data.productsCsv.washCare}</div>
                         <p>Items Included in the Package</p>
                         <div>{data.productsCsv.packaging}</div>
                     </div>
                     <button className="btn bg-green-500 mt-4 snipcart-add-item p-4 rounded text-white"
                             data-item-id={data.productsCsv.id}
-                            data-item-price={finalPrice}
+                            data-item-price={data.productsCsv.discountedPrice}
                             data-item-url={`https://bownbee.ca/${data.productsCsv.productCategory}/${data.productsCsv.fields.slug}`}
                             data-item-name={data.productsCsv.name}
                             data-item-image={`${process.env.WEBURL}` + productImage}
                             data-item-custom1-name="size" 
                             data-item-custom1-value={size}
                             data-item-custom1-options={productSizeOptions}
+                            data-item-custom1-required="true"
                             data-item-max-quantity={data.productsCsv.stock}
-                            data-item-custom3-name="Readonly information"
+                            data-item-custom3-name="SKU"
                             data-item-custom3-type="readonly"
-                            data-item-custom3-value="This is a readonly custom field"
+                            data-item-custom3-value={sku}
                     >
                             Add to cart
                     </button>
@@ -141,6 +146,7 @@ export const pageQuery = graphql`
       colors
       templateKey
       price
+      discountedPrice
       discount
       fields {
         slug
@@ -157,6 +163,9 @@ export const pageQuery = graphql`
       materialName
       packaging
       fabricType
+      fit
+      waistBand
+      washCare
     }
   } 
 `   

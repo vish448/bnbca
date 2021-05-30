@@ -20,10 +20,10 @@ const ContactUsPage = () => {
         </div>
         <div className="container mx-auto p-10 grid grid-cols-1 sm:grid-cols-4">
             <div className="col-start-1 col-span-2 justify-self-center self-center">
-                <AiTwotoneMail className="float-left m-1"/>: <a href="mailto:bownbeecanada@gmail.com">bownbeecanada@gmail.com </a><br/>
+                <AiTwotoneMail className="float-left m-1"/>: <a href="mailto:canada@bownbee.com">canada@bownbee.com</a><br/>
                 <FaFacebookF className="float-left m-1"/>: <a href="https://www.facebook.com/BownBeeCanada/">bownbeecanada</a> <br/>
                 <AiFillInstagram className="float-left m-1"/>: <a href="https://www.instagram.com/bownbeecanada">bownbeecanada</a> <br/>
-                <MdCall className="float-left m-1"/>: <a href="tel:6476757590">+1 (647) 675-7590</a> <br/>
+                <MdCall className="float-left m-1"/>: <a href="tel:6476757590">+1 (905) 269-6233</a> <br/>
 
             </div>
             <div className="col-span-2">
