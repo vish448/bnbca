@@ -28,7 +28,7 @@ const Footer = ({metaData})=> {
                         <FaShippingFast className="text-8xl justify-self-center"/>
                         <div className="self-center">
                         <h1 className="text-2xl">We Ship</h1>
-                        <p> to North Americas</p>
+                        <p> to North America</p>
                         </div>
                     </div>
                     
