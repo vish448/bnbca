@@ -52,7 +52,7 @@ const Footer = ({metaData})=> {
                         </ul>
                     </div>
 
-                    <div className="sm:col-span-2">
+                    <div className="sm:col-span-1 lg:col-span-2">
                         <StaticImage 
                             src="../images/logo.png" 
                             alt="Logo"

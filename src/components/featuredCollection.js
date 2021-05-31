@@ -31,9 +31,9 @@ function FeaturedCollection() {
                 <div className="cardContainerTwo">
                     <div className="cardContent grid grid-cols-2">
                         <div className="contentLeft px-8">
-                            <h1 className="font-semibold text-4xl py-20 lg:py-16  leading-8">Our Collection</h1>
+                            <h1 className="font-semibold text-4xl py-20 lg:py-16  leading-8">Siblings Collection</h1>
                             <p>Cottons and Florals for the season</p>
-                            <p className="pt-10 text-lg font-bold"><Link to="/products">Shop Our Collection <FaArrowRight className="inline" /></Link></p>
+                            <p className="pt-10 text-lg font-bold"><Link to="/siblings">Shop Our Collection <FaArrowRight className="inline" /></Link></p>
                         </div>
                         <div className="contentRight">
                             <StaticImage
