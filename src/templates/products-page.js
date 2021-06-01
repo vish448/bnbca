@@ -48,10 +48,6 @@ export default function ProductPage({ data }) {
                         <div>
                             <GatsbyImage image={productImageFluid} alt="pimage"/>
                         </div>
-                   
-                    
-
-                        
                 </div>
                 <div>
                     <h1 className="product-name text-4xl pb-4">{data.productsCsv.name}</h1>
