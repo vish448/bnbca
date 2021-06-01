@@ -50,6 +50,8 @@ export default function ProductPage({ data }) {
                         </div>
                    
                     
+
+                        
                 </div>
                 <div>
                     <h1 className="product-name text-4xl pb-4">{data.productsCsv.name}</h1>
@@ -154,7 +156,10 @@ export const pageQuery = graphql`
       productImage {
         id
         childImageSharp {
-          gatsbyImageData(width: 600, placeholder: BLURRED)
+            fluid {
+                src
+            }
+            gatsbyImageData(width: 600, placeholder: BLURRED)
         }
       }
       productDetails

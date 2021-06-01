@@ -12,7 +12,9 @@ const SimpleSlider = () => {
         allImageSharp(filter: {original: {height: {gt: 414, lt: 417}}}) {
           edges {
             node {
-              gatsbyImageData
+              fluid(maxWidth:1800) {
+                src
+              }
             }
           }
         }
@@ -24,9 +26,10 @@ const SimpleSlider = () => {
       speed: 1000,
       slidesToShow: 1,
       slidesToScroll: 1,
-      autoplay: false,
+      autoplay: true,
       arrows: true,
-      className: 'slides'
+      className: 'slides',
+      useTransform: false
     };
     const heroImages = data.allImageSharp.edges
     return (
@@ -36,7 +39,7 @@ const SimpleSlider = () => {
             heroImages.map(({node})=>{
               const bannerImage = getImage(node)
               return(
-                <GatsbyImage image={bannerImage} alt="heromage" className="banner" />
+                <img src={`${process.env.WEBURL}` + `/${node.fluid.src}`} />
               )
             })
           }
