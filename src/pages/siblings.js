@@ -68,7 +68,7 @@ const SiblingsPage = ({ data }) =>  {
         
                                 <Link
                                         key={node.id}
-                                        to={node.fields.slug}
+                                        to={`${process.env.WEBURL}/${node.productCategory}/${node.fields.slug}`}
                                         
                                         >
                                     <div className="product">
@@ -150,7 +150,7 @@ const SiblingsPage = ({ data }) =>  {
         
                                 <Link
                                         key={node.id}
-                                        to={node.fields.slug}
+                                        to={`${process.env.WEBURL}/${node.productCategory}/${node.fields.slug}`}
                                         
                                         >
                                     <div className="product">
