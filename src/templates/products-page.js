@@ -111,7 +111,7 @@ export default function ProductPage({ data }) {
                             data-item-price={data.productsCsv.discountedPrice}
                             data-item-url={`https://bownbee.ca/${data.productsCsv.productCategory}/${data.productsCsv.fields.slug}`}
                             data-item-name={data.productsCsv.name}
-                            data-item-image={`${process.env.WEBURL}` + productImage}
+                            data-item-image={`https://bownbee.ca` + productImage}
                             data-item-custom1-name="size" 
                             data-item-custom1-value={size}
                             data-item-custom1-options={productSizeOptions}
