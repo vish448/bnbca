@@ -39,7 +39,7 @@ const SimpleSlider = () => {
             heroImages.map(({node})=>{
               const bannerImage = getImage(node)
               return(
-                <img src={`${process.env.WEBURL}` + `/${node.fluid.src}`} />
+                <img src={"https://bownbee.ca" + `/${node.fluid.src}`} />
               )
             })
           }
