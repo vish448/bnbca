@@ -32,7 +32,7 @@ const NewLaunch = () => {
             productImage {
                   id
                   childImageSharp {
-                    gatsbyImageData(width: 350, placeholder: BLURRED)
+                    gatsbyImageData( placeholder: BLURRED)
                   }
                 }
             newLaunch
@@ -106,7 +106,7 @@ var settings = {
                                 className="hover:text-black"
                                 >
                             <div className="item items-center">
-                            <GatsbyImage image={newLaunchproductImage} alt="pimage" className="m-2 h-96" />
+                            <GatsbyImage image={newLaunchproductImage} alt="pimage" className="sm:m-0 m-2 h-96" />
                             <div className="item-details p-1 mt-1">
                                 <p className="desc text-gray-400 capitalize font-normal">{node.name}</p>
                                 <p className="price pb-2 text-lg">$ {node.discountedPrice} <span className=" text-red-500 line-through">$ {node.price}</span></p>
