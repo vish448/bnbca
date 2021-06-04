@@ -6,11 +6,14 @@ import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
 export default function ProductPage({ data }) {
+    console.log("DATA",data)
     let discountedRate
     let finalPrice
     let discount = data.productsCsv.discount
     const productImageFluid = getImage(data.productsCsv.productImage)
-    console.log('image',productImageFluid)
+    const productImgSrc = data.allImageSharp.edges[0].node.fluid.src
+    const allProductImgSrc = data.allImageSharp.edges
+    console.log('productImgSrc',allProductImgSrc)
     const price = data.productsCsv.price
     const productSizes = data.productsCsv.sizes.split(',')
     const productColors = data.productsCsv.colors.split(',') 
@@ -37,17 +40,48 @@ export default function ProductPage({ data }) {
  
       let productSizeBuffer = ''
       let productSizeOptions = ''
+      const settings = {
+        customPaging: function() {
+          return (
+            <a>
+            {
+                allProductImgSrc.map((node)=>{
+                    return(
+                        <img src={node.node.fluid.src} />
+                    )
+                })
+            }
+                
+            </a>
+          );
+        },
+        dots: false,
+        dotsClass: "slick-dots slick-thumb",
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        arrows: true,
+        className: 'slides',
+      };
     return (
         <>
             <div className="breadcrumb h-8 bg-gray-100 grid justify-items-center content-center">
                 {data.productsCsv.slug}
             </div>
             <div className="grid grid-cols-1 justify-items-center sm:justify-items-start sm:grid-cols-2 gap-10 p-14 container mx-auto">
-                <div className="grid grid-cols-1">
-                    
-                        <div>
-                            <GatsbyImage image={productImageFluid} alt="pimage"/>
-                        </div>
+                <div className="grid grid-cols-1 pt-0 pl-20 pb-20">
+                
+                    <Slider {...settings}>
+                    {
+                        allProductImgSrc.map((node)=>{
+                            return(
+                                <div><img src={node.node.fluid.src} /></div> 
+                            )
+                        })
+                    }
+                    </Slider>
                 </div>
                 <div>
                     <h1 className="product-name text-4xl pb-4">{data.productsCsv.name}</h1>
@@ -111,7 +145,7 @@ export default function ProductPage({ data }) {
                             data-item-price={data.productsCsv.discountedPrice}
                             data-item-url={`https://bownbee.ca/${data.productsCsv.productCategory}/${data.productsCsv.fields.slug}`}
                             data-item-name={data.productsCsv.name}
-                            data-item-image={`https://bownbee.ca` + productImage}
+                            data-item-image={`${process.env.WEBURL}` + productImage}
                             data-item-custom1-name="size" 
                             data-item-custom1-value={size}
                             data-item-custom1-options={productSizeOptions}
@@ -131,7 +165,7 @@ export default function ProductPage({ data }) {
 }
 
 export const pageQuery = graphql`
-  query ($id: String) {
+  query ($id: String, $sku: String) {
     productsCsv(id: {eq: $id}) {
       id
       name
@@ -167,6 +201,17 @@ export const pageQuery = graphql`
       fit
       waistBand
       washCare
+    }
+    
+    allImageSharp(filter: {fluid: {originalName: {regex: $sku}}}) {
+        edges {
+          node {
+            fluid {
+              src
+              originalName
+            }
+          }
+        }
     }
   } 
 `   

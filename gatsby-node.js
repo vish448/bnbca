@@ -63,7 +63,8 @@ const createPages = async ({actions,graphql}) => {
                 `src/templates/${String(node.templateKey)}.js`
             ),
             context: {
-                id: node.id
+                id: node.id,
+                sku: new RegExp(node.sku, 'i').toString()
             }
         })
     })
