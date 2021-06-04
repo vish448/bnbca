@@ -44,7 +44,7 @@ const SimpleSlider = () => {
             })
           }
         </Slider>
-        <button className="shop-cta grid mx-auto absolute pt-2 pb-2 pl-5 pr-5 bg-black text-white inset-x-0 bottom-10 left-50%"> 
+        <button className="shop-cta w-20 grid mx-auto absolute pt-2 pb-2 pl-5 pr-5 bg-black text-white inset-x-0 bottom-10 left-50%"> 
         <Link to="/products">
           SHOP
         </Link>
