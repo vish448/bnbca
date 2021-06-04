@@ -239,7 +239,7 @@ export const PageQuery = graphql`
                     productImage {
                     id
                     childImageSharp {
-                        gatsbyImageData(width: 300, placeholder: BLURRED)
+                        gatsbyImageData(placeholder: BLURRED)
                     }
                     }
                 }

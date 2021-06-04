@@ -45,3 +45,15 @@
 .newLaunchSlide .slick-next::before {
    color: #000000;
 }
+
+@media screen and (min-width:320px) and (max-width: 767px) {
+    .newLaunchSlide .slick-next{
+        right: 4%;
+    }
+    .newLaunchSlide .slick-prev {
+        left: 4%;
+    }
+    .slides .slick-prev, .slides .slick-next {
+        z-index: -1;
+      }
+}
