@@ -47,7 +47,9 @@ export default function ProductPage({ data }) {
             headers: {
                 'Authorization': `Basic ${btoa(secret)}`,
                 'Accept': 'application/json'
-            }
+            },
+            CORS: true,
+            method: 'GET',
         }).then((request => request.json()))
           .then(data => setProductData(data))
           .catch(err=>console.log(err))  
