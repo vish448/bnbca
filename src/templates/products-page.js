@@ -42,7 +42,7 @@ export default function ProductPage({ data }) {
 
     async function getProductdata(){
         setIsLoading(true);
-        const secret = "S_ZjhjMmE0YTAtOTMxMy00NjZmLWI2NTctNDQ5ZGJmYWU1ZGIwNjM3NTg3MTkzNDk4NTM3MTg5"
+        const secret = process.env.SNIP_SECRET
         const request = await fetch(`https://app.snipcart.com/api/products/${data.productsCsv.id}`, {
             headers: {
                 'Authorization': `Basic ${btoa(secret)}`,
