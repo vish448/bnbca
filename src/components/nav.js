@@ -11,7 +11,7 @@ function nav() {
             <Link to="/products">Shop</Link>
             <Link to="/about-us">About Us</Link>
             <Link to="/contact-us">Contact</Link>
-            <button className="snipcart-customer-signin block sm:hidden">My account</button>
+            <button className="snipcart-customer-signin hidden">My account</button>
         </nav>
     )
 }
