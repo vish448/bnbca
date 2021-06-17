@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { graphql } from 'gatsby'
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage, getImageData } from "gatsby-plugin-image"
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
@@ -10,7 +10,6 @@ export default function ProductPage({ data }) {
     let finalPrice
     let discount = data.productsCsv.discount
     const productImageFluid = getImage(data.productsCsv.productImage)
-    console.log('image',productImageFluid)
     const price = data.productsCsv.price
     const productSizes = data.productsCsv.sizes.split(',')
     const productColors = data.productsCsv.colors.split(',') 
@@ -25,6 +24,8 @@ export default function ProductPage({ data }) {
     const [color, setColor] = useState('')
     const [activeSize, setActiveSize] = useState(null)
     const [activeColor, setActiveColor] = useState(null)
+    const [productData, setProductData] = useState(null)
+    const [isLoading, setIsLoading] = useState(true);
 
     const toggleSize = (index) => {
         setActiveSize((activeSize) => (activeSize === index ? null : index))
@@ -34,9 +35,27 @@ export default function ProductPage({ data }) {
         setActiveColor((activeColor) => (activeColor === index ? null : index))
     }
 
- 
-      let productSizeBuffer = ''
-      let productSizeOptions = ''
+    useEffect(() => {
+        getProductdata()
+    }, [])
+
+    async function getProductdata(){
+        setIsLoading(true);
+        const secret = `${process.env.GATSBY_SNIP_SECRET}`
+        const request = await fetch(`https://app.snipcart.com/api/products/${data.productsCsv.id}`, {
+            headers: {
+                'Authorization': `Basic ${btoa(secret)}`,
+                'Accept': 'application/json'
+            },
+        }).then((request => request.json()))
+          .then(data => setProductData(data))
+          .catch(err=>console.log(err))  
+          .finally(() => setIsLoading(false))
+    }
+    
+    let productSizeBuffer = ''
+    let productSizeOptions = ''
+    if (isLoading) return <div>Loading Data</div>;
     return (
         <>
             <div className="breadcrumb h-8 bg-gray-100 grid justify-items-center content-center">
@@ -44,7 +63,6 @@ export default function ProductPage({ data }) {
             </div>
             <div className="grid grid-cols-1 justify-items-center sm:justify-items-start sm:grid-cols-2 gap-10 p-14 container mx-auto">
                 <div className="grid grid-cols-1">
-                    
                         <div>
                             <GatsbyImage image={productImageFluid} alt="pimage"/>
                         </div>
@@ -57,10 +75,10 @@ export default function ProductPage({ data }) {
                     <p className={`discount mb-4 ${discount ? 'block' : 'hidden'}`}><span className="text-lg bg-green-600 text-white p-1">{discount}% OFF</span></p> 
                     
                     <p className="text-gray-500 pb-2">SKU: {sku[0]}</p>
-                    <div className="sizes mb-4">
+                    <div className="sizes mb-4 hidden">
                         <p className="tracking-wider mb-2">Size</p>
                         {productSizes.map((size, index) => {
-                            productSizeBuffer += size + '|'
+                            //productSizeBuffer += size + '|'
                                 return (
                                     
                                     <button className={`p-2 border-gray-200 border mr-2 mb-2 hover:bg-black hover:text-white cursor-pointer focus:border-black ${activeSize === index ? 'bg-black text-white' : null}`} role="button" tabIndex={0} 
@@ -71,7 +89,6 @@ export default function ProductPage({ data }) {
                             }
                         )}
                         
-                              
                     </div> 
                     <div className="colors mb-8 hidden">
                         <p className="tracking-wider mb-2">Color</p>
@@ -84,9 +101,35 @@ export default function ProductPage({ data }) {
                             )
                             }
                         )}
-                        {productSizeOptions = productSizeBuffer.slice(0, -1)}
+                        
 
                     </div>  
+                   
+                    <div className="stock mb-4 ">
+                        <p className="tracking-wider mb-2">Size</p>
+                            {productData.variants.map((variant,index)=>{
+                                
+                                if(variant.stock != 0){
+                                    return (
+                                        <>
+                                            <button className={`p-2 border-gray-200 border mr-2 mb-2 hover:bg-black hover:text-white cursor-pointer focus:border-black ${activeSize === index ? 'bg-black text-white' : null}`} role="button" tabIndex={0} 
+                                            onClick={() => {toggleSize(index); setSize(variant.variation[0].option)}}
+                                            onKeyDown={() => {toggleSize(index); setSize(variant.variation[0].option)}} key={index}>{variant.variation[0].option}</button>
+                                            <p className="hidden">{productSizeBuffer += variant.variation[0].option + '|'}</p>
+                                        </>    
+                                    )
+                                }
+                                else {
+                                    return(
+                                        <button className={`p-2 border-red-200 border mr-2 mb-2 ${variant.stock == 0 ?'bg-gray-100 text-gray-500 cursor-default outOfStock': null}`} disabled role="button" tabIndex={0}>{variant.variation[0].option}</button>
+                                    )
+                                }
+                            })
+                        }  
+                    </div>
+                                 
+                    <p className="hidden">{productSizeOptions = productSizeBuffer.slice(0, -1)}</p>
+                    
                     <div className="product-details mb-4">
                         <p className="tracking-wider mb-2"><b>Available Quantity:</b> {data.productsCsv.stock} availble for each size. Please enquire for additonal quanity at <a href="tel:9052696233">(905) 269-6233</a></p>
                     </div>
@@ -100,7 +143,7 @@ export default function ProductPage({ data }) {
                         <div>Neck - {data.productsCsv.neckType}</div>
                         <div>Fabric - {data.productsCsv.fabricType}</div>
                         <div>WaistBand - {data.productsCsv.waistBand}</div>
-                        <div>Fir - {data.productsCsv.fit}</div><br/>
+                        <div>Fit - {data.productsCsv.fit}</div><br/>
                         <p>Washing Instructions</p>
                         <div>{data.productsCsv.washCare}</div>
                         <p>Items Included in the Package</p>
