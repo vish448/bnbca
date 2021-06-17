@@ -45,7 +45,6 @@ export default function ProductPage({ data }) {
     async function getProductdata(){
         setIsLoading(true);
         const secret = `${process.env.GATSBY_SNIP_SECRET}`
-        console.log(secret)
         const request = await fetch(`https://app.snipcart.com/api/products/${data.productsCsv.id}`, {
             headers: {
                 'Authorization': `Basic ${btoa(secret)}`,
