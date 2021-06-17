@@ -6,6 +6,8 @@ import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
 export default function ProductPage({ data }) {
+    const {SNIP_SECRET} = process.env;
+
     let discountedRate
     let finalPrice
     let discount = data.productsCsv.discount
