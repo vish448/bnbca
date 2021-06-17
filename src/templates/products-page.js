@@ -42,14 +42,13 @@ export default function ProductPage({ data }) {
 
     async function getProductdata(){
         setIsLoading(true);
-        const secret = process.env.SNIP_SECRET
+        const secret = `${process.env.SNIP_SECRET}`
+        console.log(secret)
         const request = await fetch(`https://app.snipcart.com/api/products/${data.productsCsv.id}`, {
             headers: {
                 'Authorization': `Basic ${btoa(secret)}`,
                 'Accept': 'application/json'
             },
-            CORS: true,
-            method: 'GET',
         }).then((request => request.json()))
           .then(data => setProductData(data))
           .catch(err=>console.log(err))  
