@@ -107,25 +107,44 @@ export default function ProductPage({ data }) {
                    
                     <div className="stock mb-4 ">
                         <p className="tracking-wider mb-2">Size</p>
-                            {productData.variants.map((variant,index)=>{
+                        {
+                            productData?(
+                                productData.variants.map((variant,index)=>{
                                 
-                                if(variant.stock != 0){
-                                    return (
-                                        <>
+                                    if(variant.stock != 0){
+                                        return (
+                                            <>
+                                                <button className={`p-2 border-gray-200 border mr-2 mb-2 hover:bg-black hover:text-white cursor-pointer focus:border-black ${activeSize === index ? 'bg-black text-white' : null}`} role="button" tabIndex={0} 
+                                                onClick={() => {toggleSize(index); setSize(variant.variation[0].option)}}
+                                                onKeyDown={() => {toggleSize(index); setSize(variant.variation[0].option)}} key={index}>{variant.variation[0].option}</button>
+                                                <p className="hidden">{productSizeBuffer += variant.variation[0].option + '|'}</p>
+                                            </>    
+                                        )
+                                    }
+                                    else {
+                                        return(
+                                            <button className={`p-2 border-red-200 border mr-2 mb-2 ${variant.stock == 0 ?'bg-gray-100 text-gray-500 cursor-default outOfStock': null}`} disabled role="button" tabIndex={0}>{variant.variation[0].option}</button>
+                                        )
+                                    }
+                                })
+                            
+                            ):(
+                                productSizes.map((size, index) => {
+                                    //productSizeBuffer += size + '|'
+                                        return (
+                                            
                                             <button className={`p-2 border-gray-200 border mr-2 mb-2 hover:bg-black hover:text-white cursor-pointer focus:border-black ${activeSize === index ? 'bg-black text-white' : null}`} role="button" tabIndex={0} 
-                                            onClick={() => {toggleSize(index); setSize(variant.variation[0].option)}}
-                                            onKeyDown={() => {toggleSize(index); setSize(variant.variation[0].option)}} key={index}>{variant.variation[0].option}</button>
-                                            <p className="hidden">{productSizeBuffer += variant.variation[0].option + '|'}</p>
-                                        </>    
-                                    )
-                                }
-                                else {
-                                    return(
-                                        <button className={`p-2 border-red-200 border mr-2 mb-2 ${variant.stock == 0 ?'bg-gray-100 text-gray-500 cursor-default outOfStock': null}`} disabled role="button" tabIndex={0}>{variant.variation[0].option}</button>
-                                    )
-                                }
-                            })
-                        }  
+                                            onClick={() => {toggleSize(index); setSize(size)}}
+                                            onKeyDown={() => {toggleSize(index); setSize(size)}} key={index}>{size}</button>
+                                            
+                                        )
+                                    }
+                                )
+                            )
+                                
+                            }
+                        
+                            
                     </div>
                                  
                     <p className="hidden">{productSizeOptions = productSizeBuffer.slice(0, -1)}</p>
