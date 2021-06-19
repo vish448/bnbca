@@ -17,12 +17,10 @@ const productsLayout = ( {children} ) => {
             </div>
             <div className="promo sm:m-8 grid justify-items-center content-center">
             <StaticImage 
-            src="../images/promo.png" 
-            alt="Logo"
-            placeholder="blurred"
-            layout="fixed"
-            width={1440}
-        />
+                src="../images/promo.png" 
+                alt="promotion"
+                placeholder="blurred"
+            />
             </div>
             {children}
         </>
