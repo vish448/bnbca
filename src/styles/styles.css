@@ -199,26 +199,27 @@ nav a {
 
 button.outOfStock{
   position:relative;
+  width: 140px;
 }
 button.outOfStock::before{
   content: " ";
   background-color: red;
   width: 1px;
-  height: 129px;
+  height: 142px;
   position: absolute;
-  top: -44px;
-  left: 60px;
-  transform: rotate(289deg);
+  top: -51px;
+  left: 68px;
+  transform: rotate(286deg);
 }
 button.outOfStock::after{
   content: " ";
   background-color: red;
   width:1px;
-  height: 129px;;
+  height: 142px;;
   position:absolute;
-  top:-44px;
-  left:60px;
-  transform: rotate(-289deg);
+  top:-51px;
+  left:68px;
+  transform: rotate(-286deg);
 }
 
 /* Media Queries */
