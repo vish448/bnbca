@@ -235,6 +235,7 @@ button.outOfStock::after{
     top: 0px;
     z-index: 99999;
     background: #fff;
+    width: 100%;
   }
   main {
     margin-top: 110px;
