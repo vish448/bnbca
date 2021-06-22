@@ -229,6 +229,17 @@ button.outOfStock::after{
     position: fixed;
     width: 100%;
   }
+  .headerContainer {
+    position: fixed;
+    height: 110px;
+    top: 0px;
+    z-index: 99999;
+    background: #fff;
+  }
+  main {
+    margin-top: 110px;
+  }
+
 }
 
 @media (min-width:1024px) and (max-width:1180px) {

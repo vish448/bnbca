@@ -8,7 +8,8 @@ module.exports = {
     title:'BownBeeCa',
     description: `BownBeeCa - Indian Kids Ethinic wear`,
     company: `BownBeeCanada`,
-    companyWebsite:`bownbee.ca`
+    companyWebsite:`bownbee.ca`,
+    siteUrl: `https://www.bownbee.ca`,
   },
   plugins: [
     {
@@ -24,6 +25,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     {
       resolve:`gatsby-source-filesystem`,
       options: {
