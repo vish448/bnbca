@@ -23,7 +23,7 @@ const ContactUsPage = () => {
                 <AiTwotoneMail className="float-left m-1"/>: <a href="mailto:sales@bownbee.com.au">sales@bownbee.com.au</a><br/>
                 <FaFacebookF className="float-left m-1"/>: <a href="https://www.facebook.com/BownBeeaus/">bownbeeaus</a> <br/>
                 <AiFillInstagram className="float-left m-1"/>: <a href="https://www.instagram.com/bownbeeaus">bownbeeaus</a> <br/>
-                <MdCall className="float-left m-1"/>: <a href="tel:430093556">+61 (430) 093-556</a> <br/>
+                <MdCall className="float-left m-1"/>: <a href="tel:0435593556">+61 435 593 556</a> <br/>
 
             </div>
             <div className="col-span-2">

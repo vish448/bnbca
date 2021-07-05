@@ -6,16 +6,16 @@ const PrivacyPolicyPage = () => {
         <div id="privacy-policy">
         <Helmet>
             <meta charSet="utf-8" />
-            <title>Privacy Policy | Bownbee Canada</title>
+            <title>Privacy Policy | Bownbee Australia</title>
             <meta name="description" content="This Privacy Policy relates solely to the information collection and use practices of our web site located at https://www.bownbee.ca" />
-            <meta name="keywords" content="Indian Ethinic wear, North America,Bownbee, Bownbeecanada, Bownbeeca" />
+            <meta name="keywords" content="Indian Ethinic wear, North America,Bownbee, BownbeeAustralia, Bownbeeca" />
 
-            <link rel="canonical" href="https://www.bownbee.ca/about-us" />
+            <link rel="canonical" href="https://www.bownbee.com.au/about-us" />
         </Helmet>
             <div className="breadcrumb h-8 bg-gray-100 grid justify-items-center content-center">Privacy Policy
             </div>
             <div className="lg:container lg:mx-auto p-10">
-                <p>This Privacy Policy relates solely to the information collection and use practices of our web site located at https://www.bownbee.ca (this “Website”). We recognize that many visitors and users of this Website are concerned about the information they provide to us, and how we treat that information. This Privacy Policy, which may be updated from time to time, has been developed to address those concerns.</p><br/>
+                <p>TThis Privacy Policy relates solely to the information collection and use practices of our web site located at https://www.bownbee.com.au (this “Website”). We recognize that many visitors and users of this Website are concerned about the information they provide to us, and how we treat that information. This Privacy Policy, which may be updated from time to time, has been developed to address those concerns.</p><br/>
                 <p className="font-extrabold">BY ACCESSING OR USING OUR WEBSITE OR BY PROVIDING YOUR INFORMATION, YOU HEREBY ACKNOWLEDGE THAT YOU HAVE READ, UNDERSTOOD, AND AGREED TO BE BOUND BY ALL THE TERMS OF THIS PRIVACY POLICY AND OUR WEBSITE TERMS OF USE. IF YOU DO NOT AGREE TO THESE TERMS, PLEASE EXIT THIS PAGE AND DO NOT ACCESS OR USE THE WEBSITE.</p><br/>
                 <p className="font-bold">1. Changes to Privacy Policy</p>
                 <p>We review our Privacy Policy from time to time, and we may make periodic changes to the policy in connection with that review. The revisions in Privacy Policy will be effective immediately upon being posted on the Website. Therefore, you may wish periodically review this page to make sure you have the latest version. Your continued use of the Website after the effectiveness of such revisions will constitute your acknowledgment and acceptance of the terms of the revised Privacy Policy.</p><br/>
@@ -48,9 +48,9 @@ const PrivacyPolicyPage = () => {
                 <p><span className="font-bold">Children.</span> Minors under the age of 18 are not supposed to use the Website. We do not collect or maintain information from anyone known to be under the age of 18, and no part of the Website is designed to attract anyone under the age of 18. If you are under 18 and still want to buy an product, you may use bownbee only with the involvement of a parent or guardian.</p>
                 <p><span className="font-bold">Public Areas.</span> We may provide areas on our Website where you can publicly post information about yourself, can communicate with others, or can review products. This information may be accessible by other consumers and companies and may appear on other websites or web searches, and therefore this information could be read, collected, and used by others.</p><br/>
                 <p className="font-bold">10. OPT-OUT of further usage of PERSONAL INFORMATION</p>
-                <p>If you are no longer interested in receiving e-mail announcements and other marketing information from us, or you want us to remove any PII that we have collected about you, please e-mail your request to <a href="mailto:bownbeecanada@gmail.com">bownbeecanada@gmail.com</a></p><br/><br/>
+                <p>If you are no longer interested in receiving e-mail announcements and other marketing information from us, or you want us to remove any PII that we have collected about you, please e-mail your request to <a href="mailto:sales@bownbee.com.au">sales@bownbee.com.au</a></p><br/><br/>
                 <p className="font-bold">How to Contact Us</p>
-                <p>If you have any questions or comments about this Privacy Notice, or if you would like us to update information we have about you or your preferences, please contact us by email at <a href="mailto:bownbeecanada@gmail.com">bownbeecanada@gmail.com</a></p>
+                <p>If you have any questions or comments about this Privacy Notice, or if you would like us to update information we have about you or your preferences, please contact us by email at <a href="mailto:sales@bownbee.com.au">sales@bownbee.com.au</a></p>
             </div>
         </div>
     );
