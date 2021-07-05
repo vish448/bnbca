@@ -70,7 +70,7 @@ const ProductPage = ({ data }) =>  {
                                 <Link
                                         key={node.id}
                                         //TODO -- Change the URL as per your Environment
-                                        to={`https://bownbee.ca/${node.productCategory}/${node.fields.slug}`}
+                                        to={`/${node.productCategory}/${node.fields.slug}`}
                                         
                                         >
                                     <div className="product">
