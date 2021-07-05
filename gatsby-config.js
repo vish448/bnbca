@@ -5,11 +5,11 @@ require('dotenv').config({
 module.exports = {
   /* Site config here */
   siteMetadata: {
-    title:'BownBeeCa',
-    description: `BownBeeCa - Indian Kids Ethinic wear`,
-    company: `BownBeeCanada`,
-    companyWebsite:`bownbee.ca`,
-    siteUrl: `https://www.bownbee.ca`,
+    title:'BownBeeAustralia',
+    description: `BownBeeAustralia - Indian Kids Ethinic wear`,
+    company: `BownBeeAustralia`,
+    companyWebsite:`bownbee.com.au`,
+    siteUrl: `https://www.bownbee.com.au`,
   },
   plugins: [
     {

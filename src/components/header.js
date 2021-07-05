@@ -10,8 +10,8 @@ import { MdCall } from "react-icons/md";
 function Header({siteTitle}) {
     return(
             <div className="headerContainer">
-            <div className="h-6 sm:h-10 text-black text-center items-center text-xs sm:text-xl p-1 top-reel font-bold relative"> Free Shipping across GTA. 📣 upto 25% Off on all items.</div>
-            <div className="h-5 p-1 text-center sm:block md:hidden"><MdCall className="text-center inline-block m-1 text-yellow-color"/><a href="tel:9052696233">+1 (905) 269-6233</a></div>
+            <div className="h-6 sm:h-10 text-black text-center items-center text-xs sm:text-xl p-1 top-reel font-bold relative"> Free Shipping across Australia. 📣 upto 25% Off on all items.</div>
+            <div className="h-5 p-1 text-center sm:block md:hidden"><MdCall className="text-center inline-block m-1 text-yellow-color"/><a href="tel:430093556">+61 (430) 093-556</a></div>
             <header className="container mx-auto">
                 <Helmet>
                     {siteTitle}
@@ -20,7 +20,7 @@ function Header({siteTitle}) {
                     <div className="block sm:hidden">
                         <MobileMenu />
                     </div>
-                    <div className="grid justify-items-end self-center grid-cols-2 hidden md:block"><MdCall className="float-left m-1 text-yellow-color"/><a href="tel:9052696233">+1 (905) 269-6233</a></div>
+                    <div className="grid justify-items-end self-center grid-cols-2 hidden md:block"><MdCall className="float-left m-1 text-yellow-color"/><a href="tel:430093556">+61 (430) 093-556</a></div>
                     <Link to="/" className="hidden sm:block col-start-2">
                         <StaticImage 
                             src="../images/logo.png" 

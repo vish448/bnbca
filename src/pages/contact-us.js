@@ -10,20 +10,20 @@ const ContactUsPage = () => {
         <>
         <Helmet>
             <meta charSet="utf-8" />
-            <title>Contact | Bownbee Canada</title>
-            <meta name="description" content="BownBee Canada is connecting kids to their culture and origin. We are one stop shop for all kids Indian traditional wear and accessories." />
-            <meta name="keywords" content="Indian Traditional clothes in Canada, Bownbee, Bownbeecanada, Bownbeeca" />
+            <title>Contact | Bownbee Australia</title>
+            <meta name="description" content="BownBee  is connecting kids to their culture and origin. We are one stop shop for all kids Indian traditional wear and accessories." />
+            <meta name="keywords" content="Indian Traditional clothes in Australia, Bownbee, BownbeeAustralia, Bownbeeca" />
 
-            <link rel="canonical" href="https://www.bownbee.ca/contact-us" />
+            <link rel="canonical" href="https://www.bownbee.com.au/contact-us" />
         </Helmet>
         <div className="breadcrumb h-8 bg-gray-100 grid justify-items-center content-center">Contact Us
         </div>
         <div className="container mx-auto p-10 grid grid-cols-1 sm:grid-cols-4">
             <div className="col-start-1 col-span-2 justify-self-center self-center">
-                <AiTwotoneMail className="float-left m-1"/>: <a href="mailto:canada@bownbee.com">canada@bownbee.com</a><br/>
-                <FaFacebookF className="float-left m-1"/>: <a href="https://www.facebook.com/BownBeeCanada/">bownbeecanada</a> <br/>
-                <AiFillInstagram className="float-left m-1"/>: <a href="https://www.instagram.com/bownbeecanada">bownbeecanada</a> <br/>
-                <MdCall className="float-left m-1"/>: <a href="tel:6476757590">+1 (905) 269-6233</a> <br/>
+                <AiTwotoneMail className="float-left m-1"/>: <a href="mailto:sales@bownbee.com.au">sales@bownbee.com.au</a><br/>
+                <FaFacebookF className="float-left m-1"/>: <a href="https://www.facebook.com/BownBeeaus/">bownbeeaus</a> <br/>
+                <AiFillInstagram className="float-left m-1"/>: <a href="https://www.instagram.com/bownbeeaus">bownbeeaus</a> <br/>
+                <MdCall className="float-left m-1"/>: <a href="tel:430093556">+61 (430) 093-556</a> <br/>
 
             </div>
             <div className="col-span-2">
