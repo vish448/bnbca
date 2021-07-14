@@ -176,7 +176,6 @@ export default function ProductPage({ data }) {
                             data-item-image={`https://bownbee.ca` + productImage}
                             data-item-custom1-name="size" 
                             data-item-custom1-value={size}
-                            data-item-custom1-options={productSizeOptions}
                             data-item-custom1-required="true"
                             data-item-max-quantity={data.productsCsv.stock}
                             data-item-custom3-name="SKU"
