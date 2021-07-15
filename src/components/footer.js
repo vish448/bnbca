@@ -70,7 +70,7 @@ const Footer = ({metaData})=> {
                             <li className="p-2 sm:p-0"><AiFillInstagram className="inline-block m-1"/>: <a target="_blank" href="https://www.instagram.com/bownbeecanada">bownbeecanada</a> <br/>
                             </li>
                             <li className="p-2 sm:p-0"><FaFacebookF className="inline-block m-1"/>: <a target="_blank" href="https://www.facebook.com/BownBeeCanada/">bownbeecanada</a></li>
-                            <p>We are one stop shop for all kids occassional dresses</p>
+                            <p>We are one stop shop for all kids occasional dresses</p>
 
                         </ul>
                     </div>

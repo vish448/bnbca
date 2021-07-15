@@ -15,7 +15,7 @@ const productsLayout = ( {children} ) => {
             </Helmet>
             <div className="breadcrumb h-8 bg-gray-100 grid justify-items-center content-center">Products
             </div>
-            <div className="promo sm:m-8 grid justify-items-center content-center">
+            <div className="promo hidden sm:m-8 grid justify-items-center content-center">
             <StaticImage 
                 src="../images/promo.png" 
                 alt="promotion"
