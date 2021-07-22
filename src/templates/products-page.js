@@ -87,7 +87,7 @@ export default function ProductPage({ data }) {
 
                     </div>  
                     <div className="product-details mb-4">
-                        <p className="tracking-wider mb-2"><b>Available Quantity:</b> {data.productsCsv.stock} availble for each size. Please enquire for additonal quanity at <a href="tel:9052696233">(905) 269-6233</a></p>
+                        <p className="tracking-wider mb-2"><b>Available Quantity:</b> {data.productsCsv.stock} available for each size. Please enquire for additonal quantity at <a href="tel:0435593556">(043) 559-3556</a></p>
                     </div>
                     <div className="product-details mb-4">
                         <p className="tracking-wider mb-2 font-extrabold"><b>Product Details</b></p>
@@ -99,7 +99,7 @@ export default function ProductPage({ data }) {
                         <div>Neck - {data.productsCsv.neckType}</div>
                         <div>Fabric - {data.productsCsv.fabricType}</div>
                         <div>WaistBand - {data.productsCsv.waistBand}</div>
-                        <div>Fir - {data.productsCsv.fit}</div><br/>
+                        <div>Fit - {data.productsCsv.fit}</div><br/>
                         <p>Washing Instructions</p>
                         <div>{data.productsCsv.washCare}</div>
                         <p>Items Included in the Package</p>
