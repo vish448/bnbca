@@ -38,4 +38,32 @@
     .bg-purple-400 {
         background-color: rgba(167, 139, 250) !important;
     }
+    .bg-beige-400 {
+        background-color: rgba(245, 245, 220);
+    }
+    .bg-brown-400 {
+        background-color: rgba(162, 42, 42);
+    }
+    .bg-gold-400 {
+        background-color: rgb(212,175,55);
+    }
+    .bg-grey-400 {
+        background-color: rgba(220, 220, 220);
+    }
+    .bg-mustard-400 {
+        background-color: rgba(255, 219, 88);
+    }
+    .bg-orange-400 {
+        background-color: rgba(255, 102, 0);
+    }
+    .bg-peach-400 {
+        background-color: rgba(255, 195, 177);
+    }
+    .bg-teal-400 {
+        background-color: rgba(0, 128, 128);
+    }
+    .bg-white-400 {
+        background-color: rgba(255, 255, 255);
+    }
+    
 }
