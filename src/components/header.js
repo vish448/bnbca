@@ -11,7 +11,7 @@ function Header({siteTitle}) {
     return(
             <div className="headerContainer">
             <div className="h-12 pl-2 pr-2 sm:h-10 text-black text-center items-center text-xs sm:text-xl p-1 top-reel font-bold relative"> Australia wide free shipping. 📣Want to visit and buy? - 
-            We have local stockists in Melbourne, Sydney, Brisbane and Adelaide</div>
+            We have local stockists in Melbourne, Brisbane and Adelaide</div>
             <div className="h-5 p-1 text-center sm:block md:hidden"><MdCall className="text-center inline-block m-1 text-yellow-color"/><a href="tel:0435593556">+61 435 593 556</a></div>
             <header className="container mx-auto">
                 <Helmet>

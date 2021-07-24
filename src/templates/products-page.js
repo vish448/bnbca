@@ -87,7 +87,7 @@ export default function ProductPage({ data }) {
 
                     </div>  
                     <div className="product-details mb-4">
-                        <p className="tracking-wider mb-2"><b>Available Quantity:</b> {data.productsCsv.stock} available for each size. Please enquire for additonal quantity at <a href="tel:0435593556">(043) 559-3556</a></p>
+                        <p className="tracking-wider mb-2"><b>Available Quantity:</b> Please enquire for additonal quantity at <a href="tel:+61435593556">+61 435 593 556</a></p>
                     </div>
                     <div className="product-details mb-4">
                         <p className="tracking-wider mb-2 font-extrabold"><b>Product Details</b></p>
