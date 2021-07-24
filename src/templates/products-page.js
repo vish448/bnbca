@@ -106,11 +106,11 @@ export default function ProductPage({ data }) {
                         <div>{data.productsCsv.packaging}</div>
                     </div>
                     <button className="btn bg-green-500 mt-4 snipcart-add-item p-4 rounded text-white"
-                            /*data-item-id={data.productsCsv.id}
+                            data-item-id={data.productsCsv.id}
                             data-item-price={data.productsCsv.discountedPrice}
-                            data-item-url={`https://bownbee.ca/${data.productsCsv.productCategory}/${data.productsCsv.fields.slug}`}
+                            data-item-url={`${process.env.SNIPCARTAU}/${data.productsCsv.productCategory}/${data.productsCsv.fields.slug}`}
                             data-item-name={data.productsCsv.name}
-                            data-item-image={`https://bownbee.ca` + productImage}
+                            data-item-image={`${process.env.SNIPCARTAU}` + productImage}
                             data-item-custom1-name="size" 
                             data-item-custom1-value={size}
                             data-item-custom1-options={productSizeOptions}
@@ -118,7 +118,7 @@ export default function ProductPage({ data }) {
                             data-item-max-quantity={data.productsCsv.stock}
                             data-item-custom3-name="SKU"
                             data-item-custom3-type="readonly"
-                            data-item-custom3-value={sku}*/
+                            data-item-custom3-value={sku}
                     >
                             Add to cart
                     </button>

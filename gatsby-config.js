@@ -44,7 +44,7 @@ module.exports = {
     {
       resolve:`gatsby-plugin-snipcartv3`,
       options: {
-        apiKey:process.env.SNIPCART,
+        apiKey:process.env.SNIPCARTAU,
         js: `https://cdn.snipcart.com/themes/v3.0.3/default/snipcart.js`,
         styles: `https://cdn.snipcart.com/themes/v3.0.3/default/snipcart.css`,
         autopop: false
@@ -53,8 +53,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "BownBeeCa",
-        short_name: "BownBeeCa",
+        name: "BownBeeAu",
+        short_name: "BownBeeAu",
         start_url: "/",
         // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
         // see https://developers.google.com/web/fundamentals/web-app-manifest/#display

@@ -150,7 +150,7 @@ const SiblingsPage = ({ data }) =>  {
         
                                 <Link
                                         key={node.id}
-                                        to={`${process.env.WEBURL}/${node.productCategory}/${node.fields.slug}`}
+                                        to={`/${node.productCategory}/${node.fields.slug}`}
                                         
                                         >
                                     <div className="product">
