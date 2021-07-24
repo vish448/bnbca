@@ -102,7 +102,7 @@ var settings = {
                         return(
                             <Link 
                                 key={node.id}
-                                to={`https://bownbee.ca/${node.productCategory}/${node.fields.slug}`}
+                                to={`/${node.productCategory}/${node.fields.slug}`}
                                 className="hover:text-black"
                                 >
                             <div className="item items-center">

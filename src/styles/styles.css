@@ -52,7 +52,7 @@ nav a {
     position: absolute;
     left: 10px;
     z-index: 1;
-    top: 69px;
+    top: 96px;
   }
   #menu-icon {
     width: 40px;
@@ -139,7 +139,7 @@ nav a {
     background-color: var(--header-bg-color);
     overflow-x: hidden;
     transition: 0.5s;
-    top: 106px;
+    top: 125px;
   }
   .mobileNav ul {
     padding: 10px;
@@ -238,7 +238,7 @@ button.outOfStock::after{
     width: 100%;
   }
   main {
-    margin-top: 110px;
+    margin-top: 140px;
   }
 
 }

@@ -13,8 +13,8 @@ const Footer = ({metaData})=> {
                     <div className="grid grid-cols-2">
                         <MdLocalShipping className="text-8xl justify-self-center"/>
                         <div className="self-center">
-                        <h1 className="text-2xl">Free Shipping</h1>
-                        <p>on orders above $79</p>
+                        <h1 className="text-2xl">Australia wide</h1>
+                        <p>free shipping</p>
                         </div>
                     </div>
                     <div className="grid grid-cols-2">
@@ -27,8 +27,8 @@ const Footer = ({metaData})=> {
                     <div className="grid grid-cols-2">
                         <FaShippingFast className="text-8xl justify-self-center"/>
                         <div className="self-center">
-                        <h1 className="text-2xl">We Ship</h1>
-                        <p> to Newzeland</p>
+                        <h1 className="text-2xl">We also Ship</h1>
+                        <p> to New zeland</p>
                         </div>
                     </div>
                     
@@ -47,7 +47,7 @@ const Footer = ({metaData})=> {
                         <h1 className="text:1xl lg:text-2xl pb-2 font-bold">Policies</h1>
                         <ul>
                             <li className="p-3"><Link to="/privacy-policy">Privacy Policy</Link></li>
-                            <li className="p-3"><Link to="/shipping-policy">Shipping Policy</Link></li>
+                            
                             <li className="p-3"><Link to="/return-policy">Return/Exchange Policy</Link></li>
                         </ul>
                     </div>

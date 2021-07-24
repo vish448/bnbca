@@ -8,9 +8,9 @@ const AboutUsPage = ()=> {
         <>
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>About | Bownbee Canada</title>
-                <meta name="description" content="BownBee Canada is connecting kids to their culture and origin. We are one stop shop for all kids Indian traditional wear and accessories." />
-                <meta name="keywords" content="Indian Traditional clothes for Kids, Bownbee, Bownbeecanada, Bownbeeca" />
+                <title>About | Bownbee Australia</title>
+                <meta name="description" content="BownBee Australia is connecting kids to their culture and origin. We are one stop shop for all kids Indian traditional wear and accessories." />
+                <meta name="keywords" content="Indian Traditional clothes for Kids, Bownbee, BownbeeAustralia, Bownbeeca" />
 
                 <link rel="canonical" href="https://www.bownbee.ca/about-us" />
             </Helmet>

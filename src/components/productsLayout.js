@@ -7,9 +7,9 @@ const productsLayout = ( {children} ) => {
         <>
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>Products | Bownbee Canada</title>
-                <meta name="description" content="Ethinic wear, Indian ethinic wear, Indian Kids clothing, Indian traditional cloths, Festival clothing, Girls dresses, Indian girls dresses, Indian boys cloths, Kurta pijama, Salvar for girls, Punbabi girls dresses, Navrati dresses for kids, Indian Traditional wear, Indian accessories Girls, Bownbee, Bownbeecanada, Bownbeeca" />
-                <meta name="keywords" content="BownBee Canada offers wide range of Indian traditional wear and accessories collection for Boys and Girls." />
+                <title>Products | Bownbee Australia</title>
+                <meta name="description" content="Ethinic wear, Indian ethinic wear, Indian Kids clothing, Indian traditional cloths, Festival clothing, Girls dresses, Indian girls dresses, Indian boys cloths, Kurta pijama, Salvar for girls, Punbabi girls dresses, Navrati dresses for kids, Indian Traditional wear, Indian accessories Girls, Bownbee, BownbeeAustralia, Bownbeeca" />
+                <meta name="keywords" content="BownBee Australia offers wide range of Indian traditional wear and accessories collection for Boys and Girls." />
             
                 <link rel="canonical" href="https://www.bownbee.ca/products" />
             </Helmet>
