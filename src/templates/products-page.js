@@ -108,9 +108,9 @@ export default function ProductPage({ data }) {
                     <button className="btn bg-green-500 mt-4 snipcart-add-item p-4 rounded text-white"
                             data-item-id={data.productsCsv.id}
                             data-item-price={data.productsCsv.discountedPrice}
-                            data-item-url={`${process.env.GATSBY_AUWEBURL}/${data.productsCsv.productCategory}/${data.productsCsv.fields.slug}`}
+                            data-item-url={`https://bnbcomau.netlify.app/${data.productsCsv.productCategory}/${data.productsCsv.fields.slug}`}
                             data-item-name={data.productsCsv.name}
-                            data-item-image={`${process.env.GATSBY_AUWEBURL}` + productImage}
+                            data-item-image={`https://bnbcomau.netlify.app` + productImage}
                             data-item-custom1-name="size" 
                             data-item-custom1-value={size}
                             data-item-custom1-options={productSizeOptions}
