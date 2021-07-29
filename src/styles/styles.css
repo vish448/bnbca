@@ -276,3 +276,7 @@ button.outOfStock::after{
         width: 300px;
     }
 }
+
+.snipcart-modal__container {
+  z-index: 999999 !important;
+}
