@@ -259,7 +259,7 @@ button.outOfStock::after{
   }
   .headerContainer {
     position: fixed;
-    height: 110px;
+    height: 140px;
     top: 0px;
     z-index: 99999;
     background: #fff;
