@@ -66,6 +66,10 @@ Global styles
     }
     .bg-white-400 {
         background-color: rgb(255, 255, 255) !important;
+        border: 1px solid #000000;
+    }
+    .bg-greyBKG {
+      background-color: rgb(208, 208, 208) !important;
     }
   
 

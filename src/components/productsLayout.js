@@ -13,7 +13,7 @@ const productsLayout = ( {children} ) => {
             
                 <link rel="canonical" href="https://www.bownbee.ca/products" />
             </Helmet>
-            <div className="breadcrumb h-8 bg-gray-100 grid justify-items-center content-center">Products
+            <div className="breadcrumb h-8 bg-greyBKG grid justify-items-center content-center">Products
             </div>
             <div className="promo sm:m-8 grid justify-items-center content-center hidden">
             <StaticImage 
