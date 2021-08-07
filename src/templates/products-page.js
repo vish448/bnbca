@@ -98,6 +98,7 @@ export default function ProductPage({ data }) {
                         <p className="tracking-wider mb-2 font-extrabold"><b>Product Details</b></p>
                         <div>{data.productsCsv.productDetails}</div>
                         <b>Specifications</b>
+                        <div>Id - {data.productsCsv.id}</div>
                         <div>Brand Name - Bownbee</div>
                         <div>Sleeves - {data.productsCsv.sleeves}</div>
                         <div>Material - {data.productsCsv.materialName}</div>

@@ -73,7 +73,7 @@ const GirlsPage = ({ data }) =>  {
                                         >
                                     <div className="product">
                                         <GatsbyImage image={productImageFluidCsv} alt="pimage" />
-                                        <h1>{node.name}-{node.id}</h1>
+                                        <h1>{node.name}</h1>
                                         <p className={`price text-black pb-2 text-lg`}>$ {node.discountedPrice} <span className=" text-red-500 line-through">$ {node.price}</span><span className="text-lg hidden bg-green-600 text-white p-1 ml-2 hidden">{discount}% OFF</span></p>
                                         <p className={`price pb-2 text-lg ${discount ? 'hidden' : 'hidden'}`}>$ {node.price} </p>
                                         
