@@ -105,7 +105,7 @@ export default function ProductPage({ data }) {
                         <p>Items Included in the Package</p>
                         <div>{data.productsCsv.packaging}</div>
                     </div>
-                    <button className="btn bg-green-500 mt-4 snipcart-add-item p-4 rounded text-white"
+                    <button className={`btn bg-green-500 mt-4 snipcart-add-item p-4 rounded text-white ${data.productsCsv.stock == 0 ? 'hidden': ''}`}
                             data-item-id={data.productsCsv.id}
                             data-item-price={data.productsCsv.discountedPrice}
                             data-item-url={`https://bownbee.ca/${data.productsCsv.productCategory}/${data.productsCsv.fields.slug}`}
