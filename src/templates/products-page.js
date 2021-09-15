@@ -206,7 +206,6 @@ export const pageQuery = graphql`
       fit
       waistBand
       washCare
-      productGallery
     }
     allFile(
         filter: {extension: {regex: "/(jpg)|(png)|(webp)|(jpeg)/"}
