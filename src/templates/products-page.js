@@ -10,11 +10,15 @@ export default function ProductPage({ data }) {
     let finalPrice
     let discount = data.productsCsv.discount
     const productImageFluid = getImage(data.productsCsv.productImage)
+    const productGallaryFluid = getImage(data.allFile.node)
+    const productImgeSrc = data.productsCsv.productImage.childImageSharp.fluid.src
     const price = data.productsCsv.price
     const productSizes = data.productsCsv.sizes.split(',')
     const productColors = data.productsCsv.colors.split(',') 
     const sku = data.productsCsv.sku.split(',')  
     const productImage = data.productsCsv.productImage.childImageSharp.gatsbyImageData.images.fallback.src
+    const allData = data.allFile.edges
+
     if(discount){
         discountedRate = price - ((price * discount)/100)
         finalPrice = discountedRate.toFixed(2)
@@ -36,6 +40,32 @@ export default function ProductPage({ data }) {
  
       let productSizeBuffer = ''
       let productSizeOptions = ''
+      let gallaryImageSrc = []
+
+      allData.map(({node})=>{
+        var nodeSKU = new RegExp(`${sku}`)
+        var nodeName = node.name
+        if(nodeName.match(nodeSKU)){
+            gallaryImageSrc.push(node.childImageSharp.fluid.src)
+        }
+      });
+
+     const settings = {
+        customPaging: function(i) {
+            return (
+            <a>
+                <img src={gallaryImageSrc[i]} alt="pimage"/>
+            </a>
+            );
+        },
+        dots: true,
+        dotsClass: "slick-dots slick-thumb",
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1
+     };
+      
     return (
         <>
             <div className="breadcrumb h-8 bg-gray-100 grid justify-items-center content-center">
@@ -45,7 +75,17 @@ export default function ProductPage({ data }) {
                 <div className="grid grid-cols-1">
                     
                         <div>
-                            <GatsbyImage image={productImageFluid} alt="pimage"/>
+                            <Slider {...settings}>
+                            {
+                                gallaryImageSrc.map((src)=>{
+                                    return(
+                                        <div>
+                                            <img src={src} alt="pimage"/>
+                                        </div>
+                                    )
+                                })
+                            }
+                            </Slider>
                         </div>
                 </div>
                 <div>
@@ -166,6 +206,23 @@ export const pageQuery = graphql`
       fit
       waistBand
       washCare
+      productGallery
     }
+    allFile(
+        filter: {extension: {regex: "/(jpg)|(png)|(webp)|(jpeg)/"}
+                            absolutePath: { regex: "/productimages/" }}
+      ) {
+        edges {
+          node {
+            name
+            childImageSharp {
+              fluid(maxWidth: 915, quality: 70) {
+                aspectRatio
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
+        }
+      }
   } 
 `   
