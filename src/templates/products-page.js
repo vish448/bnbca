@@ -73,20 +73,25 @@ export default function ProductPage({ data }) {
             </div>
             <div className="grid grid-cols-1 justify-items-center sm:justify-items-start sm:grid-cols-2 gap-10 p-14 container mx-auto">
                 <div className="grid grid-cols-1">
+                
                     
-                        <div>
-                            <Slider {...settings}>
-                            {
-                                gallaryImageSrc.map((src)=>{
-                                    return(
-                                        <div>
-                                            <img src={src} alt="pimage"/>
-                                        </div>
-                                    )
-                                })
-                            }
-                            </Slider>
-                        </div>
+                    <div>
+                        <Slider {...settings}>
+                        {
+                            gallaryImageSrc.map((src)=>{
+                                return(
+                                    <div>
+                                        <img src={src} alt="piimage"/>
+                                    </div>
+                                )
+                            })
+                        }
+                        </Slider>
+                    </div>
+                    <div className="invisible" style={{height:"0px"}}>
+                        <GatsbyImage image={productImageFluid} alt="pimage"/>
+                    </div>
+                        
                 </div>
                 <div>
                     <h1 className="product-name text-4xl pb-4">{data.productsCsv.name}</h1>
