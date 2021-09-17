@@ -56,7 +56,7 @@ const createPages = async ({actions,graphql}) => {
         console.error(result.errors)
     }
     result.data.allProductsCsv.edges.forEach(({ node }) => {
-        console.log(node.productCategory)
+        //console.log(node.productCategory)
         createPage({
             path: `${String(node.productCategory)}/${node.fields.slug}`,
             component: path.resolve(
