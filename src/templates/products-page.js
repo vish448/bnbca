@@ -215,6 +215,7 @@ export const pageQuery = graphql`
     allFile(
         filter: {extension: {regex: "/(jpg)|(png)|(webp)|(jpeg)/"}
                             absolutePath: { regex: "/productimages/" }}
+        sort: {fields: name}
       ) {
         edges {
           node {
