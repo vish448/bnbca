@@ -10,7 +10,7 @@ const NewLaunch = () => {
     
     const data = useStaticQuery(graphql`
     query newLaunchQuery {
-        allProductsCsv(filter: {newLaunch: {eq: "TRUE"},type: {eq: "variable"}}) {
+        allProductsCsv(filter: {newLaunch: {eq: "TRUE"}}) {
         edges {
             node {
             id
