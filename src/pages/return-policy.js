@@ -19,7 +19,7 @@ const RetrunPolicy = () => {
        
         <ul className="list-disc list-inside"><span className="font-bold uppercase text-lg">How to exchange:</span>
             <li>To request a return, please send mail to <a href="mailto:bownbeecanada@gmail.com">bownbeecanada@gmail.com</a> within 48 hrs of receiving the product.</li>
-            <li>Do mention order number in the subject line to help us quickly process your returns. Please also mention reason for return/exchange. We will revert to you with return shipping details on receiving the return request.</li>
+            <li>Do mention order number in the subject line to help us quickly process your returns. Please also mention reason for return/exchange.</li>
             <li>Please ensure that the returned merchandize is unused, unworn, unwashed, undamaged and in sealable condition.</li>
             <li>The original packaging including brand tags, BownBee tags and invoice should be intact while returning the items.</li>
             <li>All returned items should be packed securely and safely to prevent any loss or damage during transit.</li>
