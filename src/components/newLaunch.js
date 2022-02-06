@@ -105,7 +105,7 @@ var settings = {
                                 to={`https://bownbee.ca/${node.productCategory}/${node.fields.slug}`}
                                 className="hover:text-black"
                                 >
-                            <div className="item items-center">
+                            <div className="item items-center pl-1 pr-1">
                             <GatsbyImage image={newLaunchproductImage} alt="pimage" className="sm:m-0 m-2 h-96" />
                             <div className="item-details p-1 mt-1">
                                 <p className="desc text-gray-400 capitalize font-normal">{node.name}</p>

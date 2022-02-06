@@ -9,12 +9,13 @@ import "slick-carousel/slick/slick-theme.css"
 const SimpleSlider = () => {
     const data = useStaticQuery(graphql`
       query heroImage {
-        allImageSharp(filter: {original: {height: {gt: 414, lt: 417}}}) {
+        allImageSharp(filter: {original: {height: {gt: 605, lt: 607}}}) {
           edges {
             node {
               fluid(maxWidth:1800) {
                 src
               }
+              gatsbyImageData(formats: WEBP)
             }
           }
         }
@@ -39,8 +40,9 @@ const SimpleSlider = () => {
             heroImages.map(({node})=>{
               const bannerImage = getImage(node)
               return(
-                <img src={"https://bownbee.ca" + `/${node.fluid.src}`} />
-              )
+                //<img src={"http://localhost:8000" + `/${node.fluid.src}`} width="100%" height="100%"/>
+                <GatsbyImage image={bannerImage} alt="test" />
+                )
             })
           }
         </Slider>
