@@ -57,20 +57,20 @@ export default function ProductPage({ data }) {
           .finally(() => setIsLoading(false))
     }
 
-    console.log("productData=",productData)
+    //console.log("productData=",productData)
       let productSizeBuffer = ''
       let productSizeOptions = ''
       let gallaryImageSrc = []
 
-      allData.map(({node})=>{
+      /*allData.map(({node})=>{
         var nodeSKU = new RegExp(`${sku}`)
         var nodeName = node.name
         if(nodeName.match(nodeSKU)){
             gallaryImageSrc.push(node.childImageSharp.fluid.src)
         }
-      });
+      });*/
 
-     const settings = {
+    /* const settings = {
         customPaging: function(i) {
             return (
             <a>
@@ -84,7 +84,7 @@ export default function ProductPage({ data }) {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1
-     };
+     };*/
       
     return (
         <>
@@ -95,19 +95,7 @@ export default function ProductPage({ data }) {
                 <div className="grid grid-cols-1">
                 
                     
-                    <div>
-                        <Slider {...settings}>
-                        {
-                            gallaryImageSrc.map((src)=>{
-                                return(
-                                    <div>
-                                        <img src={src} alt="piimage"/>
-                                    </div>
-                                )
-                            })
-                        }
-                        </Slider>
-                    </div>
+                   
                     <div className="invisible" style={{height:"0px"}}>
                         <GatsbyImage image={productImageFluid} alt="pimage"/>
                     </div>
