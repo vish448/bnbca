@@ -10,8 +10,8 @@ export default function ProductPage({ data }) {
     let finalPrice
     let discount = data.productsCsv.discount
     const productImageFluid = getImage(data.productsCsv.productImage)
-    const productGallaryFluid = getImage(data.allFile.node)
-    const productImgeSrc = data.productsCsv.productImage.childImageSharp.fluid.src
+    //const productGallaryFluid = getImage(data.allFile.node)
+    //const productImgeSrc = data.productsCsv.productImage.childImageSharp.fluid.src
     const price = data.productsCsv.price
     const productSizes = data.productsCsv.sizes.split(',')
     const productColors = data.productsCsv.colors.split(',') 
