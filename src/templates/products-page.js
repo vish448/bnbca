@@ -17,7 +17,7 @@ export default function ProductPage({ data }) {
     const productColors = data.productsCsv.colors.split(',') 
     const sku = data.productsCsv.sku.split(',')  
     const productImage = data.productsCsv.productImage.childImageSharp.gatsbyImageData.images.fallback.src
-    const allData = data.allFile.edges
+    //const allData = data.allFile.edges
 
     if(discount){
         discountedRate = price - ((price * discount)/100)
@@ -263,22 +263,5 @@ export const pageQuery = graphql`
       waistBand
       washCare
     }
-    allFile(
-        filter: {extension: {regex: "/(jpg)|(png)|(webp)|(jpeg)/"}
-                            absolutePath: { regex: "/productimages/" }}
-        sort: {fields: name}
-      ) {
-        edges {
-          node {
-            name
-            childImageSharp {
-              fluid(maxWidth: 915, quality: 70) {
-                aspectRatio
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
-          }
-        }
-      }
   } 
 `   
