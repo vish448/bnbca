@@ -18,7 +18,7 @@ const Home = ({data}) => {
       <meta name="keywords" content="Ethinic wear, Indian ethinic wear, Indian Kids clothing, Indian traditional cloths, Festival clothing, Girls dresses, Indian girls dresses, Indian boys cloths, Kurta pijama, Salvar for girls, Punbabi girls dresses, Navrati dresses for kids, Indian Traditional wear, Indian accessories Girls, Bownbee, Bownbeecanada, Bownbeeca" />
     
       <link rel="canonical" href="https://www.bownbee.ca/" />
-      <div id="snipcart" data-api-key={process.env.SNIPCART} hidden data-templates-url="../templates/snipcart-templates.html"></div>
+      <div id="snipcart" data-api-key={process.env.SNIPCART} hidden data-templates-url="snipcart-templates.html"></div>
     </Helmet>
       <Banner {...data} />
       <FeaturedCollection />
